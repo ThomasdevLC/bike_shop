@@ -15,8 +15,8 @@ const Bannertwo = () => {
       })
       .to(cities, {
         x: "-610%",
-        y: "-220%",
-        duration: 0.8,
+        y: "600%",
+        duration: 0.9,
         ease: "power2.in",
       });
 

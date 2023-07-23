@@ -15,7 +15,7 @@ const BannerOne = () => {
       })
       .to(cities, {
         x: "-610%",
-        y: "-220%",
+        y: "220%",
         duration: 0.8,
         ease: "power2.in",
       });

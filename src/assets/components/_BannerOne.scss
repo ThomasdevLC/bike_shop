@@ -1,0 +1,14 @@
+.banner__one {
+  display: flex;
+  gap: 320px;
+  &__city {
+    font-size: 180px;
+    font-weight: 600;
+    &__name {
+      line-height: 20px;
+    }
+    &__time {
+      width: 1500px;
+    }
+  }
+}
