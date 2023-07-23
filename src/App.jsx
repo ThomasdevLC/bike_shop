@@ -3,6 +3,7 @@ import BannerFour from "./components/BannerFour";
 import Bannerthree from "./components/BannerThree";
 import Bannertwo from "./components/BannerTwo";
 import BannerOne from "./components/BannerOne";
+import BannerSeven from "./components/BannerSeven";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
       <Bannerthree />
       <Bannertwo />
       <BannerOne />
+      <BannerSeven />
     </>
   );
 }
