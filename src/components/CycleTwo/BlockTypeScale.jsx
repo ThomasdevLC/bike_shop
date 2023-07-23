@@ -9,23 +9,23 @@ const BlockTypeScale = () => {
     getRandomIndex();
   }, []);
 
-  //   useEffect(() => {
-  //     const delay = setTimeout(() => {
-  //       if (blockTypeBottomRef.current) {
-  //         gsap.to(blockTypeBottomRef.current, {
-  //           duration: 1,
-  //           scaleX: 2,
-  //           scaleY: 2,
-  //           y: "100%",
-  //           transformOrigin: "0% 50%", // Set the transform origin to keep the left edge fixed
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      if (blockTypeBottomRef.current) {
+        gsap.to(blockTypeBottomRef.current, {
+          duration: 1,
+          scaleX: 2,
+          scaleY: 2,
+          y: "100%",
+          transformOrigin: "0% 50%", // Set the transform origin to keep the left edge fixed
 
-  //           ease: "power3.inOut",
-  //         });
-  //       }
-  //     }, 1000);
+          ease: "power3.inOut",
+        });
+      }
+    }, 1800);
 
-  //     return () => clearTimeout(delay);
-  //   }, []);
+    return () => clearTimeout(delay);
+  }, []);
 
   const getRandomIndex = () => {
     const newIndex = Math.floor(Math.random() * capitalsUTC.length);

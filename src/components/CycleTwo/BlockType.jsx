@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import SplitType from "split-type";
+
 import capitalsUTC from "../../data/citiesData";
 
 const BlockType = () => {
@@ -13,6 +15,18 @@ const BlockType = () => {
     const newIndex = Math.floor(Math.random() * capitalsUTC.length);
     setRandomIndex(newIndex);
   };
+
+  useEffect(() => {
+    const city = SplitType.create(".blocktype__bottom__citytwo");
+    const splitCity = city.chars;
+
+    gsap.from(splitCity, {
+      opacity: 0, // Start with opacity 0 so that characters are hidden
+      duration: 1, // Animation duration
+      stagger: 0.1, // Stagger the appearance of characters
+      ease: "power3.out", // Easing function
+    });
+  }, [randomIndex]); // Run the effect whenever the randomIndex changes
 
   return (
     <div className="blocktype">
