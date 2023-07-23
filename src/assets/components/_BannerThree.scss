@@ -1,0 +1,14 @@
+.banner__three {
+  display: flex;
+  gap: 100px;
+  &__city {
+    font-size: 60px;
+    font-weight: 600;
+    &__name {
+      line-height: 20px;
+    }
+    &__time {
+      width: 500px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.banner__five {
+  display: flex;
+  gap: 80px;
+  &__city {
+    font-size: 20px;
+    font-weight: 700;
+    &__name {
+      line-height: 10px;
+    }
+    &__time {
+      width: 150px;
+    }
+  }
+}
