@@ -21,7 +21,7 @@ const BlockTypeScale = ({ utc, city }) => {
       delay: 2.8,
       opacity: 0, // Start with opacity 0 so that characters are hidden
       duration: 1, // Animation duration
-      stagger: 0.1, // Stagger the appearance of characters
+      stagger: 0.3, // Stagger the appearance of characters
       ease: "power3.out", // Easing function
     });
   }, [city]); // Run the effect whenever the randomIndex changes
