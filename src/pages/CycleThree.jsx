@@ -1,8 +1,10 @@
 import BlockRight from "../components/CycleThree/BlockRight";
+import BlockMiddle from "../components/CycleThree/BlockMiddle";
 
 const CycleThree = () => {
   return (
-    <div>
+    <div className="cyclethree">
+      <BlockMiddle />
       <BlockRight />
     </div>
   );

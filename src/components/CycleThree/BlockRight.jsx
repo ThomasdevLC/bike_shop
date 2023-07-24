@@ -2,7 +2,7 @@ import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const BlockRight = () => {
-  const randomIndex = uniqueIndex(0, capitalsUTC.length, 5);
+  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 5);
 
   return (
     <div className="blockright">
