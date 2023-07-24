@@ -6,16 +6,16 @@ import uniqueIndex from "../../utils/uniqueIndex";
 
 const BlockRight = () => {
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 5);
-  const lastCityRef = useRef(null);
+  const lastCityRightRef = useRef(null);
 
   useEffect(() => {
-    if (lastCityRef.current) {
-      const city = SplitType.create(lastCityRef.current);
+    if (lastCityRightRef.current) {
+      const city = SplitType.create(lastCityRightRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
         opacity: 0,
-        duration: 1,
-        stagger: 0.1,
+        duration: 0.1,
+        stagger: 0.2,
         ease: "power3.out",
       });
     }
@@ -31,7 +31,7 @@ const BlockRight = () => {
         {randomIndex.map((index, i) => (
           <p
             key={index}
-            ref={i === randomIndex.length - 1 ? lastCityRef : null}
+            ref={i === randomIndex.length - 1 ? lastCityRightRef : null}
           >
             {capitalsUTC[index]?.city}
           </p>
