@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
-
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
