@@ -1,13 +1,20 @@
-import { useState, useEffect, useRef } from "react";
-import capitalsUTC from "../../data/citiesData";
+import { useEffect, useRef } from "react";
+import SplitType from "split-type";
 
-const BlockTypeScale = () => {
-  const [randomIndex, setRandomIndex] = useState(null);
+const BlockTypeScale = ({ utc, city }) => {
   const blockTypeBottomRef = useRef(null);
 
   useEffect(() => {
-    getRandomIndex();
-  }, []);
+    const city = SplitType.create(".blocktype__bottom__citytwo");
+    const splitCity = city.chars;
+
+    gsap.from(splitCity, {
+      opacity: 0, // Start with opacity 0 so that characters are hidden
+      duration: 1, // Animation duration
+      stagger: 0.1, // Stagger the appearance of characters
+      ease: "power3.out", // Easing function
+    });
+  }, [city]); // Run the effect whenever the randomIndex changes
 
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -39,13 +46,9 @@ const BlockTypeScale = () => {
         <p className="blocktype__top__catch">RIDE THE WORLD</p>
       </div>
       <div ref={blockTypeBottomRef} className="blocktype__bottom">
-        <p className="blocktype__bottom__time">{`UTC ${capitalsUTC[randomIndex]?.utc}`}</p>
-        <p className="blocktype__bottom__cityone">
-          {capitalsUTC[randomIndex]?.city}
-        </p>
-        <p className="blocktype__bottom__citytwo">
-          {capitalsUTC[randomIndex + 1]?.city}
-        </p>
+        <p className="blocktype__bottom__time">{`UTC ${utc}`}</p>
+        <p className="blocktype__bottom__cityone">{city}</p>
+        <p className="blocktype__bottom__citytwo">BEIJING</p>
       </div>
     </div>
   );

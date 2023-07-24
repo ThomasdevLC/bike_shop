@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import BlockTypeScale from "../components/CycleTwo/BlockTypeScale";
 import BlockType from "../components/CycleTwo/BlockType";
+import capitalsUTC from "../data/citiesData";
 
 const CycleTwo = () => {
   const topRightRef = useRef(null);
@@ -24,14 +25,26 @@ const CycleTwo = () => {
   return (
     <div className="cycletwo">
       <div className="cycletwo__top">
-        <BlockTypeScale />
+        <BlockTypeScale utc={capitalsUTC[0]?.utc} city={capitalsUTC[0]?.city} />
         <div ref={topRightRef} className="cycletwo__top__right">
-          <BlockType />
+          <BlockType
+            utc={capitalsUTC[0]?.utc}
+            city={capitalsUTC[0]?.city}
+            nextCity={capitalsUTC[1]?.city}
+          />
         </div>
       </div>
       <div ref={bottomRef} className="cycletwo__bottom">
-        <BlockType />
-        <BlockType />
+        <BlockType
+          utc={capitalsUTC[2]?.utc}
+          city={capitalsUTC[2]?.city}
+          nextCity={capitalsUTC[3]?.city}
+        />
+        <BlockType
+          utc={capitalsUTC[4]?.utc}
+          city={capitalsUTC[4]?.city}
+          nextCity={capitalsUTC[5]?.city}
+        />
       </div>
     </div>
   );

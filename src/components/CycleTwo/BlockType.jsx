@@ -1,20 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 
-import capitalsUTC from "../../data/citiesData";
-
-const BlockType = () => {
-  const [randomIndex, setRandomIndex] = useState(null);
+const BlockType = ({ utc, city, nextCity }) => {
   const blockTypeBottomRef = useRef(null);
-
-  useEffect(() => {
-    getRandomIndex();
-  }, []);
-
-  const getRandomIndex = () => {
-    const newIndex = Math.floor(Math.random() * capitalsUTC.length);
-    setRandomIndex(newIndex);
-  };
 
   useEffect(() => {
     const city = SplitType.create(".blocktype__bottom__citytwo");
@@ -26,7 +14,7 @@ const BlockType = () => {
       stagger: 0.1, // Stagger the appearance of characters
       ease: "power3.out", // Easing function
     });
-  }, [randomIndex]); // Run the effect whenever the randomIndex changes
+  }, [city]); // Run the effect whenever the randomIndex changes
 
   return (
     <div className="blocktype">
@@ -35,13 +23,9 @@ const BlockType = () => {
         <p className="blocktype__top__catch">RIDE THE WORLD</p>
       </div>
       <div ref={blockTypeBottomRef} className="blocktype__bottom">
-        <p className="blocktype__bottom__time">{`UTC ${capitalsUTC[randomIndex]?.utc}`}</p>
-        <p className="blocktype__bottom__cityone">
-          {capitalsUTC[randomIndex]?.city}
-        </p>
-        <p className="blocktype__bottom__citytwo">
-          {capitalsUTC[randomIndex + 1]?.city}
-        </p>
+        <p className="blocktype__bottom__time">{`UTC ${utc}`}</p>
+        <p className="blocktype__bottom__cityone">{city}</p>
+        <p className="blocktype__bottom__citytwo">{nextCity}</p>
       </div>
     </div>
   );
