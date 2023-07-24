@@ -9,12 +9,12 @@ const BlockType = ({ utc, city, nextCity }) => {
     const splitCity = city.chars;
 
     gsap.from(splitCity, {
-      opacity: 0, // Start with opacity 0 so that characters are hidden
-      duration: 1, // Animation duration
-      stagger: 0.1, // Stagger the appearance of characters
-      ease: "power3.out", // Easing function
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power3.out",
     });
-  }, [city]); // Run the effect whenever the randomIndex changes
+  }, [city]);
 
   return (
     <div className="blocktype">
