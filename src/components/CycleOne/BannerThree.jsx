@@ -1,6 +1,9 @@
 import { useRef, useEffect } from "react";
+import capitalsUTC from "../../data/citiesData";
+import uniqueIndex from "../../utils/uniqueIndex";
 
 const Bannerthree = () => {
+  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 18);
   const cityRefs = useRef([]);
 
   useEffect(() => {
@@ -25,32 +28,21 @@ const Bannerthree = () => {
     };
   }, []);
 
-  const numberOfCities = 10;
-
-  const renderCities = () => {
-    const cities = [];
-
-    for (let i = 0; i < numberOfCities; i++) {
-      cities.push(
-        <div
-          className="banner__three__city"
-          key={i}
-          ref={(el) => (cityRefs.current[i] = el)}
-        >
-          <p className="banner__three__city__time">UTC -05:00</p>
-          <p className="banner__three__city__name">Mexico</p>
-        </div>
-      );
-    }
-
-    return cities;
-  };
-
   return (
     <div className="container">
       <div className="banner__three">
-        {renderCities()}
-        {/* Ajouter les autres div "city" ici */}
+        {randomIndex.map((index, i) => (
+          <div
+            className="banner__three__city"
+            key={i}
+            ref={(el) => (cityRefs.current[i] = el)}
+          >
+            <p className="banner__three__city__time">{`UTC ${capitalsUTC[index]?.utc}`}</p>
+            <p className="banner__three__city__name">
+              {capitalsUTC[index]?.city}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

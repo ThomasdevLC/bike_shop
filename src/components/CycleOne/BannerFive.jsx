@@ -38,7 +38,7 @@ const BannerFive = () => {
             key={i}
             ref={(el) => (cityRefs.current[i] = el)}
           >
-            <p className="banner__five__city__time">{`UTC${capitalsUTC[index]?.utc}`}</p>
+            <p className="banner__five__city__time">{`UTC ${capitalsUTC[index]?.utc}`}</p>
             <p className="banner__five__city__name">
               {capitalsUTC[index]?.city}
             </p>
