@@ -11,38 +11,28 @@ const BlockTypeScale = ({ utc, city }) => {
     const splitMandarin = mandarin.chars;
 
     gsap.from(splitCity, {
-      opacity: 0, // Start with opacity 0 so that characters are hidden
-      duration: 1, // Animation duration
-      stagger: 0.1, // Stagger the appearance of characters
-      ease: "power3.out", // Easing function
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power3.out",
     });
-
+    gsap.to(blockTypeBottomRef.current, {
+      delay: 1.8,
+      duration: 1,
+      scaleX: 2,
+      scaleY: 2,
+      y: "100%",
+      transformOrigin: "0% 50%", // Set the transform origin to keep the left edge fixed
+      ease: "power3.inOut",
+    });
     gsap.from(splitMandarin, {
       delay: 2.8,
-      opacity: 0, // Start with opacity 0 so that characters are hidden
-      duration: 1, // Animation duration
-      stagger: 0.3, // Stagger the appearance of characters
-      ease: "power3.out", // Easing function
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+      ease: "power3.out",
     });
   }, [city]); // Run the effect whenever the randomIndex changes
-
-  useEffect(() => {
-    const delay = setTimeout(() => {
-      if (blockTypeBottomRef.current) {
-        gsap.to(blockTypeBottomRef.current, {
-          duration: 1,
-          scaleX: 2,
-          scaleY: 2,
-          y: "100%",
-          transformOrigin: "0% 50%", // Set the transform origin to keep the left edge fixed
-
-          ease: "power3.inOut",
-        });
-      }
-    }, 1800);
-
-    return () => clearTimeout(delay);
-  }, []);
 
   return (
     <div className="blocktypescale">
