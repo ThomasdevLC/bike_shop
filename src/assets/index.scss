@@ -1,5 +1,6 @@
 @use "./base";
 @use "./app";
+@use "./pages/CycleOne";
 @use "./components/CycleOne/BannerFive";
 @use "./components/CycleOne/BannerFour";
 @use "./components/CycleOne/BannerThree";
@@ -7,7 +8,8 @@
 @use "./components/CycleOne/BannerOne";
 @use "./components/CycleOne/BannerSeven";
 @use "./components/CycleOne/BannerEight";
+@use "./pages/CycleTwo";
 @use "./components/CycleTwo/BlockType";
 @use "./components/CycleTwo/BlockTypeScale";
-@use "./pages/CycleOne";
-@use "./pages/CycleTwo";
+@use "./pages/CycleThree";
+@use "./components/CycleThree/BlockRight";
