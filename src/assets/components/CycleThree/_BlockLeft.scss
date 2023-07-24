@@ -1,4 +1,11 @@
 .blockleft {
+  position: relative;
+  top: -1260px;
+  &__hidden {
+    writing-mode: vertical-rl;
+    font-size: 400px;
+    line-height: 250px;
+  }
   &__top {
     font-size: 30px;
     font-weight: 600;

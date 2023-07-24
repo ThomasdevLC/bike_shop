@@ -22,6 +22,8 @@ const BlockLeft = () => {
   }, []);
   return (
     <div className="blockleft">
+      <p className="blockleft__hidden">BIKKEY</p>
+
       <div className="blockleft__top">
         <p className="blockleft__top__name">BIKKEY</p>
         <p className="blockleft__top__catch">RIDE THE WORLD</p>
