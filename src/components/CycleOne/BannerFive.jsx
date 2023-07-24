@@ -1,6 +1,6 @@
+import { useRef, useEffect } from "react";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
-import { useRef, useEffect } from "react";
 
 const BannerFive = () => {
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 18);
