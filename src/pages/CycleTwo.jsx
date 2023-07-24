@@ -25,7 +25,7 @@ const CycleTwo = () => {
   return (
     <div className="cycletwo">
       <div className="cycletwo__top">
-        <BlockTypeScale utc={capitalsUTC[0]?.utc} city={capitalsUTC[0]?.city} />
+        <BlockTypeScale utc={capitalsUTC[8]?.utc} city={capitalsUTC[8]?.city} />
         <div ref={topRightRef} className="cycletwo__top__right">
           <BlockType
             utc={capitalsUTC[0]?.utc}
@@ -43,7 +43,7 @@ const CycleTwo = () => {
         <BlockType
           utc={capitalsUTC[4]?.utc}
           city={capitalsUTC[4]?.city}
-          nextCity={capitalsUTC[5]?.city}
+          nextCity={capitalsUTC[6]?.city}
         />
       </div>
     </div>

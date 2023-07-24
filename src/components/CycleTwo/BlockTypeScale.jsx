@@ -5,10 +5,20 @@ const BlockTypeScale = ({ utc, city }) => {
   const blockTypeBottomRef = useRef(null);
 
   useEffect(() => {
-    const city = SplitType.create(".blocktype__bottom__citytwo");
+    const city = SplitType.create(".blocktypescale__bottom__citytwo");
     const splitCity = city.chars;
+    const mandarin = SplitType.create(".blocktypescale__bottom__citythree");
+    const splitMandarin = mandarin.chars;
 
     gsap.from(splitCity, {
+      opacity: 0, // Start with opacity 0 so that characters are hidden
+      duration: 1, // Animation duration
+      stagger: 0.1, // Stagger the appearance of characters
+      ease: "power3.out", // Easing function
+    });
+
+    gsap.from(splitMandarin, {
+      delay: 2.8,
       opacity: 0, // Start with opacity 0 so that characters are hidden
       duration: 1, // Animation duration
       stagger: 0.1, // Stagger the appearance of characters
@@ -34,21 +44,19 @@ const BlockTypeScale = ({ utc, city }) => {
     return () => clearTimeout(delay);
   }, []);
 
-  const getRandomIndex = () => {
-    const newIndex = Math.floor(Math.random() * capitalsUTC.length);
-    setRandomIndex(newIndex);
-  };
-
   return (
-    <div className="blocktype">
-      <div className="blocktype__top">
-        <p className="blocktype__top__name">BIKKEY</p>
-        <p className="blocktype__top__catch">RIDE THE WORLD</p>
+    <div className="blocktypescale">
+      <div className="blocktypescale__top">
+        <p className="blocktypescale__top__name">BIKKEY</p>
+        <p className="blocktypescale__top__catch">RIDE THE WORLD</p>
       </div>
       <div ref={blockTypeBottomRef} className="blocktype__bottom">
-        <p className="blocktype__bottom__time">{`UTC ${utc}`}</p>
-        <p className="blocktype__bottom__cityone">{city}</p>
-        <p className="blocktype__bottom__citytwo">BEIJING</p>
+        <p className="blocktypescale__bottom__time">{`UTC ${utc}`}</p>
+        <p className="blocktypescale__bottom__cityone">{city}</p>
+        <p className="blocktypescale__bottom__citytwo">
+          BEIJING{" "}
+          <span className="blocktypescale__bottom__citythree">北京 </span>
+        </p>
       </div>
     </div>
   );
