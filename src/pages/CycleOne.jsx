@@ -7,7 +7,7 @@ import BannerSeven from "../components/CycleOne/BannerSeven";
 import BannerEight from "../components/CycleOne/BannerEight";
 const CycleOne = () => {
   return (
-    <div>
+    <div className="cycleone">
       <BannerFive />
       <BannerFour />
       <Bannerthree />
