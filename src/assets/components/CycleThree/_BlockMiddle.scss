@@ -1,4 +1,11 @@
 .blockmiddle {
+  position: relative;
+  top: -3153px;
+  &__hidden {
+    writing-mode: vertical-rl;
+    font-size: 1000px;
+    line-height: 700px;
+  }
   &__top {
     font-size: 30px;
     font-weight: 600;

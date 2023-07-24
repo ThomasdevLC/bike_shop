@@ -22,6 +22,8 @@ const BlockMiddle = () => {
   }, []);
   return (
     <div className="blockmiddle">
+      <p className="blockmiddle__hidden">BIKKEY</p>
+
       <div className="blockmiddle__top">
         <p className="blockmiddle__top__name">BIKKEY</p>
         <p className="blockmiddle__top__catch">RIDE THE WORLD</p>
