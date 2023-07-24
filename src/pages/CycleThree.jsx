@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import BlockRight from "../components/CycleThree/BlockRight";
 import BlockMiddle from "../components/CycleThree/BlockMiddle";
 import BlockLeft from "../components/CycleThree/BlockLeft";
+import josh from "../assets/images/josh2.jpg";
 
 const CycleThree = () => {
   const leftRef = useRef(null);
@@ -15,16 +16,16 @@ const CycleThree = () => {
 
     gsap.fromTo(
       [rightBlock, middleBlock, leftBlock],
-      { x: "-200%" },
-      { x: 0, stagger: 0.5, duration: 1.5, ease: "sine.inOut" }
+      { x: "-180%" },
+      { x: 0, stagger: 0.5, duration: 1.2, ease: "sine.inOut" }
     );
 
     gsap.fromTo(
       [rightBlock, middleBlock, leftBlock],
       { y: 0 },
       {
-        y: "200%",
-        delay: 3.6,
+        y: "400%",
+        delay: 3.2,
         stagger: 0.15,
         duration: 1.5,
         ease: "sine.inOut",
@@ -34,6 +35,8 @@ const CycleThree = () => {
 
   return (
     <div className="cyclethree">
+      <img src={josh} alt="Your alt text" className="background-image" />
+
       <div className="cyclethree__left" ref={leftRef}>
         <BlockLeft />
       </div>

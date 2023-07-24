@@ -23,7 +23,7 @@ const BlockRight = () => {
 
   return (
     <div className="blockright">
-      {/* <p className="blockright__hidden">BIKKEY</p> */}
+      <p className="blockright__hidden">BIKKEY</p>
 
       <div className="blockright__top">
         <p className="blockright__top__name">BIKKEY</p>

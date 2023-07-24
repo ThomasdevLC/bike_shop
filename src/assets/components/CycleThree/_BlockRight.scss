@@ -1,16 +1,12 @@
 .blockright {
-  // &__hidden {
-  //   position: absolute;
-  //   top: -3200px;
-  //   font-size: 810px;
-  //   font-weight: 600;
-  //   line-height: 30px;
-  //   padding-bottom: 300px;
-  //   transform: rotate(90deg);
-  //   transform-origin: left bottom;
-  // }
+  position: relative;
+  top: -4890px;
+  &__hidden {
+    writing-mode: vertical-rl;
+    font-size: 1550px;
+    line-height: 1200px;
+  }
   &__top {
-    position: relative;
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
