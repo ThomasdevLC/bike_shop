@@ -1,12 +1,12 @@
-// import CycleOne from "./pages/CycleOne";
-import CycleTwo from "./pages/CycleTwo";
+import CycleOne from "./pages/CycleOne";
+// import CycleTwo from "./pages/CycleTwo";
 // import CycleThree from "./pages/CycleThree";
 
 function App() {
   return (
     <>
-      {/* <CycleOne /> */}
-      <CycleTwo />
+      <CycleOne />
+      {/* <CycleTwo /> */}
       {/* <CycleThree /> */}
     </>
   );
