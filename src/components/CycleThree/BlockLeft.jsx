@@ -12,6 +12,7 @@ const BlockLeft = () => {
       const city = SplitType.create(lastCityLefttRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
+        delay: 2.2,
         opacity: 0,
         duration: 0.1,
         stagger: 0.2,

@@ -12,6 +12,7 @@ const BlockRight = () => {
       const city = SplitType.create(lastCityRightRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
+        delay: 2.2,
         opacity: 0,
         duration: 0.1,
         stagger: 0.2,
@@ -22,6 +23,8 @@ const BlockRight = () => {
 
   return (
     <div className="blockright">
+      {/* <p className="blockright__hidden">BIKKEY</p> */}
+
       <div className="blockright__top">
         <p className="blockright__top__name">BIKKEY</p>
         <p className="blockright__top__catch">RIDE THE WORLD</p>

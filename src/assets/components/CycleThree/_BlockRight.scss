@@ -1,5 +1,16 @@
 .blockright {
+  // &__hidden {
+  //   position: absolute;
+  //   top: -3200px;
+  //   font-size: 810px;
+  //   font-weight: 600;
+  //   line-height: 30px;
+  //   padding-bottom: 300px;
+  //   transform: rotate(90deg);
+  //   transform-origin: left bottom;
+  // }
   &__top {
+    position: relative;
     font-size: 30px;
     font-weight: 600;
     line-height: 30px;
