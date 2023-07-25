@@ -10,10 +10,10 @@ function App() {
   const [activePageIndex, setActivePageIndex] = useState(0);
 
   const pages = [
-    { component: <CycleOne />, duration: 3200 },
+    { component: <CycleOne />, duration: 3000 },
     { component: <CycleTwo />, duration: 3600 },
-    { component: <CycleThree />, duration: 4500 },
-    { component: <CycleFour />, duration: 4000 },
+    { component: <CycleThree />, duration: 4200 },
+    { component: <CycleFour />, duration: 3800 },
     { component: <FinalPage />, duration: 3000 },
   ];
 
