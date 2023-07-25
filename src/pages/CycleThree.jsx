@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import BlockRight from "../components/CycleThree/BlockRight";
 import BlockMiddle from "../components/CycleThree/BlockMiddle";
 import BlockLeft from "../components/CycleThree/BlockLeft";
-import josh from "../assets/images/josh1.jpg";
+import josh from "../assets/images/josh.jpg";
 
 const CycleThree = () => {
   const leftRef = useRef(null);
