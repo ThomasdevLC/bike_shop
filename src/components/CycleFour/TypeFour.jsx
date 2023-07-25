@@ -5,11 +5,11 @@ import uniqueIndex from "../../utils/uniqueIndex";
 
 const TypeFour = () => {
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 10);
-  const lastCityMiddletRef = useRef(null);
+  const lastCityRef = useRef(null);
 
   useEffect(() => {
-    if (lastCityMiddletRef.current) {
-      const city = SplitType.create(lastCityMiddletRef.current);
+    if (lastCityRef.current) {
+      const city = SplitType.create(lastCityRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
         delay: 2.2,
@@ -23,15 +23,12 @@ const TypeFour = () => {
   return (
     <div className="typefour">
       <div className="typefour__bottom">
-        <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         {randomIndex.map((index, i) => (
-          <p
-            key={index}
-            ref={i === randomIndex.length[-1] ? lastCityMiddletRef : null}
-          >
+          <p key={index} ref={i === 0 ? lastCityRef : null}>
             {capitalsUTC[index]?.city}
           </p>
         ))}
+        <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         <div className="typefour__top">
           <p className="typefour__top__catch">RIDE THE WORLD</p>
           <p className="typefour__top__name">ASPHALT</p>

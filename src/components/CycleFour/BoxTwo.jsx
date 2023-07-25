@@ -3,7 +3,7 @@ const BoxeTwo = () => {
   return (
     <div className="boxtwo">
       <p className="boxtwo__brand">ASPHALT</p>
-      <div className="boxtwo__brand">
+      <div className="boxtwo__type">
         <TypeTwo />
       </div>
     </div>

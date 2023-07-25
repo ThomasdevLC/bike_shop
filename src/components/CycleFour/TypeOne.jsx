@@ -3,13 +3,13 @@ import SplitType from "split-type";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
-const TypeThree = () => {
+const TypeOne = () => {
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 15);
-  const lastCityRef = useRef(null);
+  const lastCityMiddletRef = useRef(null);
 
   useEffect(() => {
-    if (lastCityRef.current) {
-      const city = SplitType.create(lastCityRef.current);
+    if (lastCityMiddletRef.current) {
+      const city = SplitType.create(lastCityMiddletRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
         delay: 2.2,
@@ -21,21 +21,24 @@ const TypeThree = () => {
     }
   }, []);
   return (
-    <div className="typethree">
-      <div className="typethree__bottom">
+    <div className="typeone">
+      <div className="typeone__bottom">
+        <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         {randomIndex.map((index, i) => (
-          <p key={index} ref={i === 0 ? lastCityRef : null}>
+          <p
+            key={index}
+            ref={i === randomIndex.length - 1 ? lastCityMiddletRef : null}
+          >
             {capitalsUTC[index]?.city}
           </p>
         ))}
-        <p>{`UTC${capitalsUTC[9]?.utc}`} </p> <p>{capitalsUTC[9]?.city}</p>
-        <div className="typethree__top">
-          <p className="typethree__top__catch">RIDE THE WORLD</p>
-          <p className="typethree__top__name">ASPHALT</p>
+        <div className="typeone__top">
+          <p className="typeone__top__catch">RIDE THE WORLD</p>
+          <p className="typeone__top__name">ASPHALT</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default TypeThree;
+export default TypeOne;

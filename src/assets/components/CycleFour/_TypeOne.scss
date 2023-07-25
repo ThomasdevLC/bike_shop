@@ -1,17 +1,17 @@
-.typetwo {
+.typeone {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  height: 210px;
+  height: 300px;
   white-space: nowrap;
-  overflow: hidden;
+
   &__top {
     font-size: 15px;
     font-weight: 600;
     line-height: 15px;
   }
   &__bottom {
-    font-size: 80px;
+    font-size: 180px;
     font-weight: 500;
-    line-height: 70px;
+    line-height: 155px;
   }
 }
