@@ -3,6 +3,7 @@ import BoxOne from "../components/CycleFour/BoxOne";
 import BoxTwo from "../components/CycleFour/BoxTwo";
 import BoxThree from "../components/CycleFour/BoxThree";
 import BoxFour from "../components/CycleFour/BoxFour";
+import josh from "../assets/images/josh.jpg";
 
 const CycleFour = () => {
   const oneRef = useRef(null);
@@ -36,6 +37,8 @@ const CycleFour = () => {
 
   return (
     <div className="cyclefour">
+      <img src={josh} alt="Your alt text" className="background-image" />
+
       <div className="cyclefour__boxone" ref={oneRef}>
         <BoxOne />
       </div>

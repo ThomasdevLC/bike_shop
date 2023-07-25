@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import BlockTypeScale from "../components/CycleTwo/BlockTypeScale";
 import BlockType from "../components/CycleTwo/BlockType";
 import capitalsUTC from "../data/citiesData";
+import josh2 from "../assets/images/josh2.jpg";
 
 const CycleTwo = () => {
   const topRightRef = useRef(null);
@@ -24,6 +25,8 @@ const CycleTwo = () => {
   }, []);
   return (
     <div className="cycletwo">
+      <img src={josh2} alt="Your alt text" className="background-image" />
+
       <div className="cycletwo__top">
         <BlockTypeScale utc={capitalsUTC[8]?.utc} city={capitalsUTC[8]?.city} />
         <div ref={topRightRef} className="cycletwo__top__right">
