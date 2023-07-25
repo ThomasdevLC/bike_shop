@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Assurez-vous d'importer framer motion
 import CycleOne from "./pages/CycleOne";
 import CycleTwo from "./pages/CycleTwo";
 import CycleThree from "./pages/CycleThree";
@@ -12,7 +11,7 @@ function App() {
   const pages = [
     { component: <CycleOne />, duration: 3000 },
     { component: <CycleTwo />, duration: 3600 },
-    { component: <CycleThree />, duration: 4200 },
+    { component: <CycleThree />, duration: 4300 },
     { component: <CycleFour />, duration: 3800 },
     { component: <FinalPage />, duration: 3000 },
   ];
@@ -36,15 +35,7 @@ function App() {
 
   return (
     <div className="appcontainer">
-      <motion.div
-        className="appcontainer__page"
-        initial={{ opacity: 0, y: "-100%" }}
-        animate={{ opacity: 1, y: "0%" }}
-        exit={{ opacity: 0, y: "100%" }}
-        transition={{ duration: 0.5 }}
-      >
-        {pages[activePageIndex].component}
-      </motion.div>
+      <div>{pages[activePageIndex].component}</div>
     </div>
   );
 }
