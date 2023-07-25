@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
+import josh5 from "../assets/images/josh5.jpg";
 
 const FinalPage = () => {
   const splitBrandRef = useRef(null); // Utilisez un nom de variable différent pour useRef.
@@ -18,6 +19,7 @@ const FinalPage = () => {
   }, []);
   return (
     <div className="finalpage">
+      <img src={josh5} alt="Your alt text" className="background-image" />
       <div className="finalpage__container">
         <div className="finalpage__container__shop">shop</div>
         <div className="finalpage__container__hidden">

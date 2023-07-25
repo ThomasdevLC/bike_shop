@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import BlockRight from "../components/CycleThree/BlockRight";
 import BlockMiddle from "../components/CycleThree/BlockMiddle";
 import BlockLeft from "../components/CycleThree/BlockLeft";
-import josh from "../assets/images/josh.jpg";
+import josh3 from "../assets/images/josh3.jpg";
 
 const CycleThree = () => {
   const leftRef = useRef(null);
@@ -35,7 +35,7 @@ const CycleThree = () => {
 
   return (
     <div className="cyclethree">
-      <img src={josh} alt="Your alt text" className="background-image" />
+      <img src={josh3} alt="Your alt text" className="background-image" />
 
       <div className="cyclethree__left" ref={leftRef}>
         <BlockLeft />
