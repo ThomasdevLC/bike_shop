@@ -9,15 +9,21 @@
     justify-content: space-around;
     gap: 380px;
     &__shop {
+      display: flex;
       writing-mode: vertical-lr;
       transform: rotate(180deg);
       font-size: 56px;
       font-weight: 700;
       color: #fa481c;
     }
-    &__brand {
-      font-size: 200px;
-      font-weight: 500;
+    &__hidden {
+      overflow: hidden;
+      height: 160px;
+      &__brand {
+        font-size: 200px;
+        line-height: 160px;
+        font-weight: 500;
+      }
     }
     &__time {
       writing-mode: vertical-lr;
