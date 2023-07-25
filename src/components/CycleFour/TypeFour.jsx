@@ -22,10 +22,6 @@ const TypeFour = () => {
   }, []);
   return (
     <div className="typefour">
-      <div className="typefour__top">
-        <p className="typefour__top__name">BIKKEY</p>
-        <p className="typefour__top__catch">RIDE THE WORLD</p>
-      </div>
       <div className="typefour__bottom">
         <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         {randomIndex.map((index, i) => (
@@ -36,6 +32,10 @@ const TypeFour = () => {
             {capitalsUTC[index]?.city}
           </p>
         ))}
+        <div className="typefour__top">
+          <p className="typefour__top__catch">RIDE THE WORLD</p>
+          <p className="typefour__top__name">ASPHALT</p>
+        </div>
       </div>
     </div>
   );

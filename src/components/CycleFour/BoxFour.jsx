@@ -3,7 +3,7 @@ const BoxeFour = () => {
   return (
     <div className="boxfour">
       <p className="boxfour__brand">ASPHALT</p>
-      <div className="">
+      <div className="boxfour__type">
         <TypeFour />
       </div>
     </div>

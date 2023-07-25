@@ -1,0 +1,15 @@
+.typefour {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  &__top {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 10px;
+  }
+  &__bottom {
+    font-size: 18px;
+    font-weight: 500;
+    // width: 740px;
+    line-height: 20px;
+  }
+}
