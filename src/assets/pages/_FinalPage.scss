@@ -1,0 +1,14 @@
+.finalpage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__shop {
+    font-size: 200px;
+    font-weight: 500;
+  }
+  &__brand {
+    font-size: 200px;
+    font-weight: 500;
+  }
+}
