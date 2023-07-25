@@ -1,8 +1,9 @@
 .boxone {
   display: flex;
+
   &__brand {
-    margin-left: -550px;
     font-size: 440px;
     line-height: 360px;
+    padding-right: 10px;
   }
 }

@@ -8,7 +8,7 @@ const TypeTwo = () => {
   useEffect(() => {
     const intervalId = setInterval(
       () => {
-        const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 15);
+        const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 8);
         setRandomIndexes(randomIndex);
       },
 
