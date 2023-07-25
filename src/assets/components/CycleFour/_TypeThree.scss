@@ -1,0 +1,18 @@
+.typethree {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  height: 210px;
+  padding: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  &__top {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+  }
+  &__bottom {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+}

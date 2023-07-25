@@ -3,8 +3,8 @@ import SplitType from "split-type";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
-const TypeFour = () => {
-  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 10);
+const TypeThree = () => {
+  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 15);
   const lastCityMiddletRef = useRef(null);
 
   useEffect(() => {
@@ -21,24 +21,24 @@ const TypeFour = () => {
     }
   }, []);
   return (
-    <div className="typefour">
-      <div className="typefour__bottom">
+    <div className="typethree">
+      <div className="typethree__bottom">
         <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         {randomIndex.map((index, i) => (
           <p
             key={index}
-            ref={i === randomIndex.length[-1] ? lastCityMiddletRef : null}
+            ref={i === randomIndex.length - 1 ? lastCityMiddletRef : null}
           >
             {capitalsUTC[index]?.city}
           </p>
         ))}
-        <div className="typefour__top">
-          <p className="typefour__top__catch">RIDE THE WORLD</p>
-          <p className="typefour__top__name">ASPHALT</p>
+        <div className="typethree__top">
+          <p className="typethree__top__catch">RIDE THE WORLD</p>
+          <p className="typethree__top__name">ASPHALT</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default TypeFour;
+export default TypeThree;
