@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import LandingPage from "./pages/LandingPage";
 import CycleOne from "./pages/CycleOne";
 import CycleTwo from "./pages/CycleTwo";
 import CycleThree from "./pages/CycleThree";
@@ -9,6 +10,7 @@ function App() {
   const [activePageIndex, setActivePageIndex] = useState(0);
 
   const pages = [
+    { component: <LandingPage />, duration: 1800 },
     { component: <CycleOne />, duration: 3000 },
     { component: <CycleTwo />, duration: 3600 },
     { component: <CycleThree />, duration: 4300 },
