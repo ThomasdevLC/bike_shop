@@ -5,7 +5,7 @@ import Bannertwo from "../components/CycleOne/BannerTwo";
 import BannerOne from "../components/CycleOne/BannerOne";
 import BannerSeven from "../components/CycleOne/BannerSeven";
 import BannerEight from "../components/CycleOne/BannerEight";
-import josh1 from "../assets/images/josh1.jpg";
+import josh1 from "../assets/images/josh.webp";
 
 const CycleOne = () => {
   return (

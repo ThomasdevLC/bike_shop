@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import BlockTypeScale from "../components/CycleTwo/BlockTypeScale";
 import BlockType from "../components/CycleTwo/BlockType";
 import capitalsUTC from "../data/citiesData";
-import josh2 from "../assets/images/josh2.jpg";
+import josh2 from "../assets/images/josh2.webp";
 
 const CycleTwo = () => {
   const topRightRef = useRef(null);

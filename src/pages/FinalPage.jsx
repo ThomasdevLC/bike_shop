@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
-import josh5 from "../assets/images/josh5.jpg";
+import josh5 from "../assets/images/josh5.webp";
 
 const FinalPage = () => {
   const splitBrandRef = useRef(null); // Utilisez un nom de variable différent pour useRef.

@@ -3,7 +3,7 @@ import BoxOne from "../components/CycleFour/BoxOne";
 import BoxTwo from "../components/CycleFour/BoxTwo";
 import BoxThree from "../components/CycleFour/BoxThree";
 import BoxFour from "../components/CycleFour/BoxFour";
-import josh4 from "../assets/images/josh4.jpg";
+import josh4 from "../assets/images/josh4.webp";
 
 const CycleFour = () => {
   const oneRef = useRef(null);
