@@ -12,17 +12,15 @@ function App() {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
   useEffect(() => {
-    // Define the paths and durations for each page
     const pages = [
       { path: "/LandingPage", duration: 1800 },
       { path: "/CycleOne", duration: 3000 },
       { path: "/CycleTwo", duration: 3600 },
       { path: "/CycleThree", duration: 4500 },
       { path: "/CycleFour", duration: 3900 },
-      { path: "/FinalPage", duration: 3000 }, // You can remove the duration for FinalPage
+      { path: "/FinalPage" },
     ];
 
-    // Function to change the page after a specified duration
     const changePage = () => {
       const nextIndex = currentPageIndex + 1;
 
