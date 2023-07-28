@@ -19,43 +19,37 @@ function App() {
       { path: "/CycleTwo", duration: 3600 },
       { path: "/CycleThree", duration: 4500 },
       { path: "/CycleFour", duration: 3900 },
-      { path: "/FinalPage", duration: 3000 }, // You can remove the duration for FinalPage
+      { path: "/FinalPage", duration: 3000 },
     ];
 
     // Function to change the page after a specified duration
     const changePage = () => {
-      const nextIndex = currentPageIndex + 1;
+      const nextIndex =
+        currentPageIndex + 1 === pages.length ? 0 : currentPageIndex + 1;
+      setCurrentPageIndex(nextIndex);
 
-      if (nextIndex < pages.length) {
-        setCurrentPageIndex(nextIndex);
-        const nextPath = pages[nextIndex].path;
-        navigate(nextPath);
+      if (currentPageIndex === pages.length - 1) {
+        clearInterval(intervalId); // Clear the interval when reaching the FinalPage
       }
+
+      const nextPath = pages[nextIndex].path;
+      navigate(nextPath);
     };
 
-    // If the current page is the landing page, navigate to the first page after its duration
-    if (currentPageIndex === 0) {
-      setTimeout(changePage, pages[currentPageIndex].duration);
-    } else {
-      // Call the changePage function after the specified duration for the current page
-      const intervalId = setInterval(
-        changePage,
-        pages[currentPageIndex].duration
-      );
+    // Call the changePage function after the specified duration for the current page
+    const intervalId = setInterval(
+      changePage,
+      pages[currentPageIndex].duration
+    );
 
-      // Clean up the interval when the component is unmounted
-      return () => clearInterval(intervalId);
-    }
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
   }, [currentPageIndex, navigate]);
-
-  // If the current page index is 0 (landing page), render it
-  if (currentPageIndex === 0) {
-    return <LandingPage />;
-  }
 
   return (
     <div className="appcontainer">
       <Routes>
+        <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/CycleOne" element={<CycleOne />} />
         <Route path="/CycleTwo" element={<CycleTwo />} />
         <Route path="/CycleThree" element={<CycleThree />} />
