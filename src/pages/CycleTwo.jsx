@@ -25,7 +25,12 @@ const CycleTwo = () => {
   }, []);
   return (
     <div className="cycletwo">
-      <img src={josh2} alt="Your alt text" className="background-image" />
+      <img
+        src={josh2}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
 
       <div className="cycletwo__top">
         <BlockTypeScale utc={capitalsUTC[8]?.utc} city={capitalsUTC[8]?.city} />

@@ -19,7 +19,12 @@ const FinalPage = () => {
   }, []);
   return (
     <div className="finalpage">
-      <img src={josh5} alt="Your alt text" className="background-image" />
+      <img
+        src={josh5}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
       <div className="finalpage__container">
         <div className="finalpage__container__shop">shop</div>
         <div className="finalpage__container__hidden">

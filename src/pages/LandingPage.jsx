@@ -46,7 +46,12 @@ const LandingPage = () => {
   }, []);
   return (
     <div className="landingpage">
-      <img src={josh3} alt="Your alt text" className="background-image" />
+      <img
+        src={josh3}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
       <div className="landingpage__container">
         <div className="landingpage__container__top">
           <p className="landingpage__container__top__brand" ref={brandTopRef}>

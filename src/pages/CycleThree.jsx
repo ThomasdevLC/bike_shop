@@ -35,7 +35,12 @@ const CycleThree = () => {
 
   return (
     <div className="cyclethree">
-      <img src={josh3} alt="Your alt text" className="background-image" />
+      <img
+        src={josh3}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
 
       <div className="cyclethree__left" ref={leftRef}>
         <BlockLeft />

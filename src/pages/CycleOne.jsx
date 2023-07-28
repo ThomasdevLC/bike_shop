@@ -10,7 +10,12 @@ import josh1 from "../assets/images/josh.webp";
 const CycleOne = () => {
   return (
     <div className="cycleone">
-      <img src={josh1} alt="Your alt text" className="background-image" />
+      <img
+        src={josh1}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
 
       <BannerFive />
       <BannerFour />

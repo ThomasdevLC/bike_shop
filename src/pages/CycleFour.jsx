@@ -37,7 +37,12 @@ const CycleFour = () => {
 
   return (
     <div className="cyclefour">
-      <img src={josh4} alt="Your alt text" className="background-image" />
+      <img
+        src={josh4}
+        alt="Your alt text"
+        className="background-image"
+        loading="lazy"
+      />
 
       <div className="cyclefour__boxone" ref={oneRef}>
         <BoxOne />
