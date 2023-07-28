@@ -1,10 +1,14 @@
 import { useEffect, useRef } from "react";
-import josh5 from "../assets/images/josh5.webp";
+import josh3 from "../assets/images/josh3.webp";
 
 const LandingPage = () => {
   const brandTopRef = useRef(null);
+  const rideRef = useRef(null);
+  const worldRef = useRef(null);
   useEffect(() => {
     const brand = brandTopRef.current;
+    const ride = rideRef.current;
+    const world = worldRef.current;
 
     gsap.fromTo(
       brand,
@@ -14,20 +18,43 @@ const LandingPage = () => {
       {
         delay: 1,
         opacity: 1,
-        duration: 0.2,
+        duration: 0.1,
+      }
+    );
+    gsap.fromTo(
+      ride,
+      {
+        opacity: 0,
+      },
+      {
+        delay: 1.4,
+        opacity: 1,
+        duration: 0.1,
+      }
+    );
+    gsap.fromTo(
+      world,
+      {
+        opacity: 0,
+      },
+      {
+        delay: 1.5,
+        opacity: 1,
+        duration: 0.1,
       }
     );
   }, []);
   return (
     <div className="landingpage">
-      <img src={josh5} alt="Your alt text" className="background-image" />
+      <img src={josh3} alt="Your alt text" className="background-image" />
       <div className="landingpage__container">
         <div className="landingpage__container__top">
           <p className="landingpage__container__top__brand" ref={brandTopRef}>
             ASPHALT
           </p>
           <div className="landingpage__container__top__catch">
-            RIDE THE WORLD
+            <span ref={rideRef}>RIDE</span>{" "}
+            <span ref={worldRef}>THE WORLD</span>
           </div>
         </div>
         <div className="landingpage__container__bottom">
