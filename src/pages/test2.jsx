@@ -14,9 +14,9 @@ function App() {
   useEffect(() => {
     const pages = [
       { path: "/LandingPage", duration: 1800 },
-      { path: "/CycleOne", duration: 3000 },
-      { path: "/CycleTwo", duration: 3600 },
-      { path: "/CycleThree", duration: 4500 },
+      { path: "/CycleOne", duration: 2800 },
+      { path: "/CycleTwo", duration: 3400 },
+      { path: "/CycleThree", duration: 4200 },
       { path: "/CycleFour", duration: 3900 },
       { path: "/FinalPage" },
     ];
@@ -31,19 +31,13 @@ function App() {
       }
     };
 
-    // If the current page is the landing page, navigate to the first page after its duration
-    if (currentPageIndex === 0) {
-      setTimeout(changePage, pages[currentPageIndex].duration);
-    } else {
-      // Call the changePage function after the specified duration for the current page
-      const intervalId = setInterval(
-        changePage,
-        pages[currentPageIndex].duration
-      );
+    const intervalId = setInterval(
+      changePage,
+      pages[currentPageIndex].duration
+    );
 
-      // Clean up the interval when the component is unmounted
-      return () => clearInterval(intervalId);
-    }
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
   }, [currentPageIndex, navigate]);
 
   // If the current page index is 0 (landing page), render it
@@ -54,6 +48,7 @@ function App() {
   return (
     <div className="appcontainer">
       <Routes>
+        <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/CycleOne" element={<CycleOne />} />
         <Route path="/CycleTwo" element={<CycleTwo />} />
         <Route path="/CycleThree" element={<CycleThree />} />
