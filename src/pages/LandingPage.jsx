@@ -16,7 +16,7 @@ const LandingPage = () => {
         opacity: 0,
       },
       {
-        delay: 1,
+        delay: 0.5,
         opacity: 1,
         duration: 0.1,
       }
@@ -38,7 +38,7 @@ const LandingPage = () => {
         opacity: 0,
       },
       {
-        delay: 1.5,
+        delay: 1.6,
         opacity: 1,
         duration: 0.1,
       }

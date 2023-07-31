@@ -20,7 +20,7 @@ const CycleFour = () => {
     gsap.fromTo(
       [BoxOneX, BoxTwoX, BoxThreeX, BoxFourX],
       { x: "-120%" },
-      { x: 0, stagger: 0.3, duration: 1.2, ease: "sine.inOut" }
+      { x: 0, stagger: 0.3, duration: 0.8, ease: "sine.inOut" }
     );
     gsap.fromTo(
       [BoxOneX, BoxTwoX, BoxThreeX, BoxFourX],

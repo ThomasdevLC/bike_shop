@@ -1,0 +1,14 @@
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}
+.inner-carousel {
+  display: flex;
+}
+.item {
+  height: 500px;
+  padding: 40px;
+}
+.item img {
+  height: 100%;
+}
