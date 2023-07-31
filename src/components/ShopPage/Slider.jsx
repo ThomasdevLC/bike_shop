@@ -6,7 +6,7 @@ const Slider = () => {
   return (
     <div>
       <motion.div className="carousel">
-        <motion.div className="inner-carousel">
+        <motion.div drag="x" className="inner-carousel">
           {bikes.map((bike) => {
             return (
               <motion.div className="item" key={bike.id}>
