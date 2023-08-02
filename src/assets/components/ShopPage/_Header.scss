@@ -1,3 +1,17 @@
 .header {
   height: 100px;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+
+  &__brand {
+    font-size: 56px;
+  }
+  &__shop {
+    font-size: 54px;
+    font-weight: 600;
+    color: #fa481c;
+  }
 }

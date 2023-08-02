@@ -49,16 +49,16 @@
       padding-left: 40px;
     }
     &__purchase {
-      padding: 10px 50px;
+      padding: 8px 45px;
       background-color: #fa481c;
       cursor: pointer;
     }
   }
 }
 
-.card-first {
-  border-left: 1px solid white;
-}
+// .card-first {
+//   border-left: 1px solid white;
+// }
 
 .card:hover .card__img img {
   filter: brightness(100%);
