@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
-
+import transition from "../components/Transition/transition";
 const LandingPage = () => {
   const brandTopRef = useRef(null);
   const rideRef = useRef(null);
@@ -70,5 +70,6 @@ const LandingPage = () => {
     </div>
   );
 };
+const WrappedLanding = transition(LandingPage);
 
-export default LandingPage;
+export default WrappedLanding;

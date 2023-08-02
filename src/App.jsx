@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import LandingPage from "./pages/LandingPage";
 import CycleOne from "./pages/CycleOne";
 import CycleTwo from "./pages/CycleTwo";
@@ -9,6 +10,7 @@ import FinalPage from "./pages/FinalPage";
 import Shop from "./pages/Shop";
 
 function App() {
+  const location = useLocation();
   const navigate = useNavigate();
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
@@ -48,15 +50,17 @@ function App() {
 
   return (
     <div className="appcontainer">
-      <Routes>
-        <Route path="/LandingPage" element={<LandingPage />} />
-        <Route path="/CycleOne" element={<CycleOne />} />
-        <Route path="/CycleTwo" element={<CycleTwo />} />
-        <Route path="/CycleThree" element={<CycleThree />} />
-        <Route path="/CycleFour" element={<CycleFour />} />
-        <Route path="/FinalPage" element={<FinalPage />} />
-        <Route path="/Shop" element={<Shop />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/LandingPage" element={<LandingPage />} />
+          <Route path="/CycleOne" element={<CycleOne />} />
+          <Route path="/CycleTwo" element={<CycleTwo />} />
+          <Route path="/CycleThree" element={<CycleThree />} />
+          <Route path="/CycleFour" element={<CycleFour />} />
+          <Route path="/FinalPage" element={<FinalPage />} />
+          <Route path="/Shop" element={<Shop />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

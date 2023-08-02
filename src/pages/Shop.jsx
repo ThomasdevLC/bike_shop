@@ -1,5 +1,7 @@
 import Header from "../components/ShopPage/Header";
 import Slider from "../components/ShopPage/Slider";
+import transition from "../components/Transition/transition";
+
 const Shop = () => {
   return (
     <div className="shop">
@@ -13,4 +15,6 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+const WrappedShop = transition(Shop);
+
+export default WrappedShop;
