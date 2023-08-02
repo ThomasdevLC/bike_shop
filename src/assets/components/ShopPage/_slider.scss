@@ -16,7 +16,7 @@
 }
 
 .card {
-  width: 600px;
+  width: 1200px;
   cursor: pointer;
   background-color: #0d0d0d;
   border-right: 1px solid white;
@@ -25,6 +25,7 @@
 .card-img img {
   width: 100%;
   padding: 20px;
+  pointer-events: none;
 }
 
 .card-bottom {
