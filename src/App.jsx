@@ -6,7 +6,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 // import CycleThree from "./pages/CycleThree";
 // import CycleFour from "./pages/CycleFour";
 // import FinalPage from "./pages/FinalPage";
-import Slider from "./components/ShopPage/Slider";
+import Shop from "./pages/Shop";
 
 function App() {
   // const navigate = useNavigate();
@@ -56,7 +56,7 @@ function App() {
         <Route path="/CycleFour" element={<CycleFour />} />
         <Route path="/FinalPage" element={<FinalPage />} />
       </Routes> */}
-      <Slider />
+      <Shop />
     </div>
   );
 }

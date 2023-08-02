@@ -1,6 +1,7 @@
 @use "./base";
 @use "./app";
 @use "./pages/LandingPage";
+
 @use "./pages/CycleOne";
 @use "./components/CycleOne/BannerFive";
 @use "./components/CycleOne/BannerFour";
@@ -9,13 +10,16 @@
 @use "./components/CycleOne/BannerOne";
 @use "./components/CycleOne/BannerSeven";
 @use "./components/CycleOne/BannerEight";
+
 @use "./pages/CycleTwo";
 @use "./components/CycleTwo/BlockType";
 @use "./components/CycleTwo/BlockTypeScale";
+
 @use "./pages/CycleThree";
 @use "./components/CycleThree/BlockRight";
 @use "./components/CycleThree/BlockMiddle";
 @use "./components/CycleThree/BlockLeft";
+
 @use "./pages/CycleFour";
 @use "./components/CycleFour/BoxOne";
 @use "./components/CycleFour/TypeOne";
@@ -26,4 +30,7 @@
 @use "./components/CycleFour/BoxFour";
 @use "./components/CycleFour/TypeFour";
 @use "./pages/FinalPage";
+
+@use "./pages/ShopPage";
 @use "./components/ShopPage/slider";
+@use "./components/ShopPage/Header";
