@@ -15,51 +15,52 @@ const Slider = () => {
   return (
     <div className="slider">
       <motion.div
-        className="slider_wrapper"
+        className="slider__wrapper"
         ref={slider_wrapper}
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="slider_wrapper_inner"
+          className="slider__wrapper__inner"
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
-            <div className="card_img">
+            <div className="card__img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card_bottom">
-              <p>1 299 €</p>
+            <div className="card__bottom">
+              <p className="card__bottom__price">1 299 €</p>
+              <p className="card__bottom__purchase">PURCHASE</p>
             </div>
           </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
 
-            <div className="card_img">
+            <div className="card__img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card_bottom">
+            <div className="card__bottom">
               <p>price</p>
             </div>
           </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
 
-            <div className="card_img">
+            <div className="card__img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card_bottom">
+            <div className="card__bottom">
               <p>price</p>
             </div>
           </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
 
-            <div className="card_img">
+            <div className="card__img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card_bottom">
+            <div className="card__bottom">
               <p>price</p>
             </div>
           </div>
