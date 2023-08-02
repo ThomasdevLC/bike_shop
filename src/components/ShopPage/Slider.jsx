@@ -24,6 +24,16 @@ const Slider = () => {
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
+          <div className="card card-first">
+            <h1 className="card__title">740 STORMZ</h1>
+            <div className="card__img">
+              <img src={bike1} alt="" />
+            </div>
+            <div className="card__bottom">
+              <p className="card__bottom__price">1 299 €</p>
+              <p className="card__bottom__purchase">PURCHASE</p>
+            </div>
+          </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
             <div className="card__img">
@@ -36,32 +46,22 @@ const Slider = () => {
           </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
-
             <div className="card__img">
               <img src={bike1} alt="" />
             </div>
             <div className="card__bottom">
-              <p>price</p>
+              <p className="card__bottom__price">1 299 €</p>
+              <p className="card__bottom__purchase">PURCHASE</p>
             </div>
           </div>
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
-
             <div className="card__img">
               <img src={bike1} alt="" />
             </div>
             <div className="card__bottom">
-              <p>price</p>
-            </div>
-          </div>
-          <div className="card">
-            <h1 className="card__title">740 STORMZ</h1>
-
-            <div className="card__img">
-              <img src={bike1} alt="" />
-            </div>
-            <div className="card__bottom">
-              <p>price</p>
+              <p className="card__bottom__price">1 299 €</p>
+              <p className="card__bottom__purchase">PURCHASE</p>
             </div>
           </div>
         </motion.div>
