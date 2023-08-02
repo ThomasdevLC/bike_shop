@@ -13,46 +13,53 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="slider">
       <motion.div
         className="slider_wrapper"
         ref={slider_wrapper}
         whileTap={{ cursor: "grabbing" }}
       >
         <motion.div
-          className="inner-carousel"
+          className="slider_wrapper_inner"
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
         >
           <div className="card">
-            <div className="card-img">
+            <h1 className="card__title">740 STORMZ</h1>
+            <div className="card_img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card-bottom">
+            <div className="card_bottom">
+              <p>1 299 €</p>
+            </div>
+          </div>
+          <div className="card">
+            <h1 className="card__title">740 STORMZ</h1>
+
+            <div className="card_img">
+              <img src={bike1} alt="" />
+            </div>
+            <div className="card_bottom">
               <p>price</p>
             </div>
           </div>
           <div className="card">
-            <div className="card-img">
+            <h1 className="card__title">740 STORMZ</h1>
+
+            <div className="card_img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card-bottom">
+            <div className="card_bottom">
               <p>price</p>
             </div>
           </div>
           <div className="card">
-            <div className="card-img">
+            <h1 className="card__title">740 STORMZ</h1>
+
+            <div className="card_img">
               <img src={bike1} alt="" />
             </div>
-            <div className="card-bottom">
-              <p>price</p>
-            </div>
-          </div>
-          <div className="card">
-            <div className="card-img">
-              <img src={bike1} alt="" />
-            </div>
-            <div className="card-bottom">
+            <div className="card_bottom">
               <p>price</p>
             </div>
           </div>

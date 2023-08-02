@@ -1,33 +1,38 @@
-.container {
+.slider {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #0d0d0d;
-}
+  color: white;
 
-.slider_wrapper {
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-}
+  &_wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
 
-.inner-carousel {
-  display: inline-flex;
+    &_inner {
+      display: inline-flex;
+    }
+  }
 }
 
 .card {
-  width: 1200px;
+  width: 1100px;
   cursor: pointer;
   background-color: #0d0d0d;
   border-right: 1px solid white;
-}
 
-.card-img img {
-  width: 100%;
-  padding: 20px;
-  pointer-events: none;
-}
+  &_title {
+    color: white;
+  }
 
-.card-bottom {
-  color: white;
+  &_img img {
+    width: 100%;
+    padding: 40px;
+    pointer-events: none;
+  }
+
+  &_bottom {
+    color: white;
+  }
 }
