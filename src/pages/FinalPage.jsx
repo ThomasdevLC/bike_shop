@@ -1,9 +1,16 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 import SplitType from "split-type";
 import josh5 from "../assets/images/josh5.webp";
 
 const FinalPage = () => {
+  const navigate = useNavigate();
   const splitBrandRef = useRef(null); // Utilisez un nom de variable différent pour useRef.
+
+  const handleShopClick = () => {
+    navigate("/Shop");
+  };
 
   useEffect(() => {
     if (splitBrandRef.current) {
@@ -26,7 +33,9 @@ const FinalPage = () => {
         loading="lazy"
       />
       <div className="finalpage__container">
-        <div className="finalpage__container__shop">shop</div>
+        <div className="finalpage__container__shop" onClick={handleShopClick}>
+          shop
+        </div>{" "}
         <div className="finalpage__container__hidden">
           <div
             className="finalpage__container__hidden__brand"
