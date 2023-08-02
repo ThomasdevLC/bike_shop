@@ -32,8 +32,8 @@
     width: 100%;
     padding: 30px 80px;
     pointer-events: none;
-    filter: brightness(70%);
-    transition: filter 0.8s;
+    filter: brightness(60%);
+    transition: filter 0.8s ease;
   }
 
   &__bottom {
