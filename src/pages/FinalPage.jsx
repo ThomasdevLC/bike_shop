@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-
+import dateTimeUtils from "../utils/dateTimeUtils";
 import SplitType from "split-type";
 import josh5 from "../assets/images/josh5.webp";
 
 const FinalPage = () => {
+  const date = dateTimeUtils.currentDay();
+
   const navigate = useNavigate();
   const splitBrandRef = useRef(null); // Utilisez un nom de variable différent pour useRef.
 
@@ -45,7 +47,7 @@ const FinalPage = () => {
             ASPHALT
           </div>
         </div>
-        <div className="finalpage__container__time">sat 29 july</div>
+        <div className="finalpage__container__time">{date}</div>
       </div>
     </div>
   );

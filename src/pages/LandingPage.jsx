@@ -1,7 +1,11 @@
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
 import transition from "../components/Transition/transition";
+import dateTimeUtils from "../utils/dateTimeUtils";
+
 const LandingPage = () => {
+  const time = dateTimeUtils.currentTime();
+
   const brandTopRef = useRef(null);
   const rideRef = useRef(null);
   const worldRef = useRef(null);
@@ -64,7 +68,7 @@ const LandingPage = () => {
         </div>
         <div className="landingpage__container__bottom">
           <p className="landingpage__container__bottom__city">PARIS</p>
-          <p className="landingpage__container__bottom__time">17:05</p>
+          <p className="landingpage__container__bottom__time">{time}</p>
         </div>
       </div>
     </div>

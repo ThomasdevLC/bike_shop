@@ -16,18 +16,19 @@ const ThanksPage = () => {
 
     gsap.to([riderContainer], {
       rotate: 6,
+      ease: "power3.out",
     });
     gsap.fromTo(
       [top, bottom, span],
       { y: "110%" },
-      { y: 0, stagger: 0.4, duration: 0.8 }
+      { y: 0, stagger: 0.4, duration: 0.6 }
     );
     gsap.fromTo(
       [rider],
       { scaleY: 1.5 },
       {
         scaleY: 0,
-        duration: 1.2,
+        duration: 1,
         transformOrigin: "top ",
       }
     );
