@@ -16,7 +16,7 @@ const CycleThree = () => {
 
     gsap.fromTo(
       [rightBlock, middleBlock, leftBlock],
-      { x: "-180%" },
+      { x: "-150%" },
       { x: 0, stagger: 0.4, duration: 0.8, ease: "sine.inOut" }
     );
 

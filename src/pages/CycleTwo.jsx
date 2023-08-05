@@ -8,15 +8,18 @@ const CycleTwo = () => {
   const topRightRef = useRef(null);
   const bottomRef = useRef(null);
   useEffect(() => {
+    const topCities = topRightRef.current;
+    const bottomCities = bottomRef.current;
+
     // Animation logic for cycletwo__top__right sliding to the right and off the screen
-    gsap.to(topRightRef.current, {
+    gsap.to(topCities, {
       x: "150%",
       duration: 0.7,
       delay: 2.2,
       ease: "Power3.inOut",
     });
     // Animation logic for cycletwo__bottom descending down
-    gsap.to(bottomRef.current, {
+    gsap.to(bottomCities, {
       y: "150%",
       duration: 0.8,
       delay: 2.2,
