@@ -7,14 +7,21 @@
   align-items: center;
   &__text {
     font-size: 180px;
-    line-height: 160px;
     position: absolute;
     z-index: 99;
+    &__top {
+      overflow: hidden;
+      line-height: 150px;
+    }
+    &__bottom {
+      overflow: hidden;
+      line-height: 150px;
+    }
   }
   &__image {
-    height: 350px;
+    height: 380px;
     position: relative;
-    left: 500px;
+    left: 520px;
     transform: rotate(6deg);
   }
   &__image img {
