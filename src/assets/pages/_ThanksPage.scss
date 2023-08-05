@@ -18,13 +18,27 @@
       line-height: 150px;
     }
   }
-  &__image {
+
+  &__box {
+    position: absolute;
     height: 380px;
-    position: relative;
-    left: 520px;
-    transform: rotate(6deg);
-  }
-  &__image img {
-    height: 100%;
+    right: 280px;
+    &__slide {
+      position: relative;
+      background-color: #0d0d0d;
+      height: 388px;
+      width: 115%;
+      transform: translateX(-1%);
+
+      z-index: 999;
+      &__image {
+        height: 100%;
+        width: 100%;
+        transform: translateY(-100%);
+      }
+      &__image img {
+        height: 100%;
+      }
+    }
   }
 }
