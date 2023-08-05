@@ -23,11 +23,12 @@
     position: absolute;
     height: 380px;
     right: 280px;
+    transform: rotate(6deg);
 
     &__slide {
       position: relative;
       background-color: #0d0d0d;
-      height: 388px;
+      height: 385px;
       width: 115%;
       transform: translateX(-1%);
       z-index: 999;
