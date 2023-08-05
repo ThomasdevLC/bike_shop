@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import bike1 from "../../assets/images/bike-one.jpg";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Slider = () => {
+  const navigate = useNavigate();
+  const handleBuyClick = () => {
+    navigate("/ThanksPage");
+  };
+
   const [width, setwidth] = useState(0);
   const slider_wrapper = useRef();
 
@@ -31,7 +37,13 @@ const Slider = () => {
             </div>
             <div className="card__bottom">
               <p className="card__bottom__price">1 299 €</p>
-              <p className="card__bottom__purchase">PURCHASE</p>
+              <div className="card__bottom__purchase" onClick={handleBuyClick}>
+                <span>
+                  <span>
+                    PURCHASE <span>PURCHASE</span>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
           <div className="card">

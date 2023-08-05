@@ -8,6 +8,7 @@ import CycleThree from "./pages/CycleThree";
 import CycleFour from "./pages/CycleFour";
 import FinalPage from "./pages/FinalPage";
 import Shop from "./pages/Shop";
+import ThanksPage from "./pages/ThanksPage";
 
 function App() {
   const location = useLocation();
@@ -59,6 +60,8 @@ function App() {
           <Route path="/CycleFour" element={<CycleFour />} />
           <Route path="/FinalPage" element={<FinalPage />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/ThanksPage" element={<ThanksPage />} />
         </Routes>
       </AnimatePresence>
     </div>
