@@ -14,11 +14,8 @@ const TypeTwo = () => {
 
       800
     );
-
-    // Clear the interval when the component unmounts to avoid memory leaks
     return () => clearInterval(intervalId);
-  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
-
+  }, []);
   return (
     <div className="typetwo">
       <div className="typetwo__bottom">

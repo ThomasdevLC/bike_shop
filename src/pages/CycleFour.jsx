@@ -27,7 +27,7 @@ const CycleFour = () => {
       { y: 0 },
       {
         y: "-700%",
-        delay: 2.4,
+        delay: 2.6,
         stagger: 0.02,
         duration: 1,
         ease: "sine.inOut",
