@@ -14,15 +14,15 @@ const CycleTwo = () => {
     // Animation logic for cycletwo__top__right sliding to the right and off the screen
     gsap.to(topCities, {
       x: "150%",
-      duration: 0.7,
-      delay: 0.8,
+      duration: 0.8,
+      delay: 1.2,
       ease: "Power3.inOut",
     });
     // Animation logic for cycletwo__bottom descending down
     gsap.to(bottomCities, {
       y: "150%",
       duration: 0.8,
-      delay: 0.8,
+      delay: 1.2,
       ease: "Power3.inOut",
     });
   }, []);

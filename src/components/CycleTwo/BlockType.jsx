@@ -11,7 +11,7 @@ const BlockType = ({ utc, city, nextCity }) => {
     gsap.from(chars, {
       opacity: 0,
       duration: 0.2,
-      stagger: 0.1,
+      stagger: 0.2,
       ease: "power3.out",
     });
 

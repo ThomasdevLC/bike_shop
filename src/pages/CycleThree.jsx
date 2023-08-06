@@ -25,7 +25,7 @@ const CycleThree = () => {
       { y: 0 },
       {
         y: "500%",
-        delay: 3.4,
+        delay: 2.4,
         stagger: 0.3,
         duration: 1.5,
         ease: "sine.inOut",

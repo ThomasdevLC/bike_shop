@@ -13,11 +13,11 @@ const BlockTypeScale = ({ utc, city }) => {
     gsap.from(splitCity, {
       opacity: 0,
       duration: 0.2,
-      stagger: 0.1,
+      stagger: 0.2,
       ease: "power3.inOut",
     });
     gsap.to(blockScaleRef.current, {
-      delay: 0.7,
+      delay: 1,
       duration: 1,
       scaleX: 2,
       scaleY: 2,
@@ -26,7 +26,7 @@ const BlockTypeScale = ({ utc, city }) => {
       ease: "power3.inOut",
     });
     gsap.from(splitMandarin, {
-      delay: 1.6,
+      delay: 2,
       opacity: 0,
       duration: 0.2,
       stagger: 0.3,
