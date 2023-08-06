@@ -17,7 +17,7 @@ const BlockTypeScale = ({ utc, city }) => {
       ease: "power3.inOut",
     });
     gsap.to(blockScaleRef.current, {
-      delay: 1.9,
+      delay: 0.7,
       duration: 1,
       scaleX: 2,
       scaleY: 2,
@@ -26,7 +26,7 @@ const BlockTypeScale = ({ utc, city }) => {
       ease: "power3.inOut",
     });
     gsap.from(splitMandarin, {
-      delay: 2.8,
+      delay: 1.6,
       opacity: 0,
       duration: 0.2,
       stagger: 0.3,

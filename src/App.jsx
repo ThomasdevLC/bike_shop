@@ -19,7 +19,7 @@ function App() {
     const pages = [
       { path: "/LandingPage", duration: 2200 },
       { path: "/CycleOne", duration: 2800 },
-      { path: "/CycleTwo", duration: 3400 },
+      { path: "/CycleTwo", duration: 2600 },
       { path: "/CycleThree", duration: 4400 },
       { path: "/CycleFour", duration: 3800 },
       { path: "/FinalPage" },
