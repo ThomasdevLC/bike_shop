@@ -1,43 +1,55 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import LandingPage from "./pages/LandingPage";
 import CycleOne from "./pages/CycleOne";
 import CycleTwo from "./pages/CycleTwo";
 import CycleThree from "./pages/CycleThree";
 import CycleFour from "./pages/CycleFour";
 import FinalPage from "./pages/FinalPage";
-import LandingPage from "./pages/LandingPage";
+import Shop from "./pages/Shop";
+import ThanksPage from "./pages/ThanksPage";
 
 function App() {
-  const [activePageIndex, setActivePageIndex] = useState(0);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
 
+  // Declare the pages array outside of the useEffect hook
   const pages = [
-    { component: <LandingPage />, duration: 1800 },
-    { component: <CycleOne />, duration: 3000 },
-    { component: <CycleTwo />, duration: 3600 },
-    { component: <CycleThree />, duration: 4500 },
-    { component: <CycleFour />, duration: 3900 },
-    { component: <FinalPage />, duration: 3000 },
+    { component: <LandingPage />, duration: 2200 },
+    { component: <CycleOne />, duration: 2700 },
+    { component: <CycleTwo />, duration: 2650 },
+    { component: <CycleThree />, duration: 3400 },
+    { component: <CycleFour />, duration: 3300 },
+    { component: <FinalPage /> },
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActivePageIndex((prevIndex) => {
-        // Si c'est la dernière page, arrêter l'intervalle
-        if (prevIndex === pages.length - 1) {
-          clearInterval(interval);
-        }
-        // Passer à la page suivante, sauf si c'est la dernière page
-        return prevIndex === pages.length - 1
-          ? prevIndex
-          : (prevIndex + 1) % pages.length;
-      });
-    }, pages[activePageIndex].duration);
+    const changePage = () => {
+      const nextIndex = currentPageIndex + 1;
 
-    return () => clearInterval(interval);
-  }, [activePageIndex, pages]); // Ajouter imagesLoaded comme dépendance ici
+      if (nextIndex < pages.length) {
+        setCurrentPageIndex(nextIndex);
+      }
+    };
+
+    const intervalId = setInterval(
+      changePage,
+      pages[currentPageIndex].duration
+    );
+
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, [pages, currentPageIndex]);
+
+  // Si le currentIndex est 0 (page de démarrage), affichez la page de démarrage
+  if (currentPageIndex === 0) {
+    return <LandingPage />;
+  }
 
   return (
     <div className="appcontainer">
-      <div>{pages[activePageIndex].component}</div>
+      <AnimatePresence mode="wait">
+        {pages[currentPageIndex].component}
+      </AnimatePresence>
     </div>
   );
 }
