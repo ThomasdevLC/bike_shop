@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 
 const BlockTypeScale = ({ utc, city }) => {
-  const blockTypeBottomRef = useRef(null);
+  const blockScaleRef = useRef(null);
 
   useEffect(() => {
     const city = SplitType.create(".blocktypescale__bottom__citytwo");
@@ -14,9 +14,9 @@ const BlockTypeScale = ({ utc, city }) => {
       opacity: 0,
       duration: 0.2,
       stagger: 0.1,
-      ease: "power3.out",
+      ease: "power3.inOut",
     });
-    gsap.to(blockTypeBottomRef.current, {
+    gsap.to(blockScaleRef.current, {
       delay: 1.9,
       duration: 1,
       scaleX: 2,
@@ -40,7 +40,7 @@ const BlockTypeScale = ({ utc, city }) => {
         <p className="blocktypescale__top__name">BIKKEY</p>
         <p className="blocktypescale__top__catch">RIDE THE WORLD</p>
       </div>
-      <div ref={blockTypeBottomRef} className="blocktype__bottom">
+      <div ref={blockScaleRef} className="blocktype__bottom">
         <p className="blocktypescale__bottom__time">{`UTC ${utc}`}</p>
         <p className="blocktypescale__bottom__cityone">{city}</p>
         <p className="blocktypescale__bottom__citytwo">
