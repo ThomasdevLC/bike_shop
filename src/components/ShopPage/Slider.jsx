@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import bike1 from "../../assets/images/bike-one.jpg";
+import bike1 from "../../assets/images/bike-one.png";
+import bike2 from "../../assets/images/bike-two.png";
+import bike3 from "../../assets/images/bike-three.png";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Slider = () => {
@@ -49,7 +51,7 @@ const Slider = () => {
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
             <div className="card__img">
-              <img src={bike1} alt="" />
+              <img src={bike2} alt="" />
             </div>
             <div className="card__bottom">
               <p className="card__bottom__price">1 299 €</p>
@@ -59,7 +61,7 @@ const Slider = () => {
           <div className="card">
             <h1 className="card__title">740 STORMZ</h1>
             <div className="card__img">
-              <img src={bike1} alt="" />
+              <img src={bike3} alt="" />
             </div>
             <div className="card__bottom">
               <p className="card__bottom__price">1 299 €</p>
