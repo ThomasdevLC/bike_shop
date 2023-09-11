@@ -47,14 +47,12 @@ function App() {
 
   return (
     <div className="appcontainer">
-      <Routes>
-        <Route path="/LandingPage" element={<LandingPage />} />
-        <Route path="/CycleOne" element={<CycleOne />} />
-        <Route path="/CycleTwo" element={<CycleTwo />} />
-        <Route path="/CycleThree" element={<CycleThree />} />
-        <Route path="/CycleFour" element={<CycleFour />} />
-        <Route path="/FinalPage" element={<FinalPage />} />
-      </Routes>
+      <LandingPage />
+      <CycleOne />
+      <CycleTwo />
+      <CycleThree />
+      <CycleFour />
+      <FinalPage />
     </div>
   );
 }
