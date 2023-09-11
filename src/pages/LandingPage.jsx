@@ -5,6 +5,7 @@ import dateTimeUtils from "../utils/dateTimeUtils";
 
 const LandingPage = () => {
   const [count, setCount] = useState(100);
+  const formattedCount = String(count).padStart(3, "0");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -79,7 +80,7 @@ const LandingPage = () => {
           <p className="landingpage__container__bottom__time">{time}</p>
         </div>
       </div>
-      <p className="count"> {count}</p> {/* Affichez la valeur de count ici */}
+      <p className="count"> {formattedCount}</p>
     </div>
   );
 };

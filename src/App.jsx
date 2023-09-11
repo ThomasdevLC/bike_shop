@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const pages = [
-      { path: "/LandingPage", duration: 5000 },
+      { path: "/LandingPage", duration: 5600 },
       { path: "/CycleOne", duration: 2700 },
       { path: "/CycleTwo", duration: 2650 },
       { path: "/CycleThree", duration: 3400 },
