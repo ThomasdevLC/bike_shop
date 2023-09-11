@@ -1,14 +1,27 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 
 const LandingPage = () => {
+  const [count, setCount] = useState(100);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (count > 0) {
+        setCount(count - 1);
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [count]);
+
   const time = dateTimeUtils.currentTime();
 
   const brandTopRef = useRef(null);
   const rideRef = useRef(null);
   const worldRef = useRef(null);
+
   useEffect(() => {
     const brand = brandTopRef.current;
     const ride = rideRef.current;
@@ -48,22 +61,17 @@ const LandingPage = () => {
       }
     );
   }, []);
+
   return (
     <div className="landingpage">
-      <img
-        src={josh3}
-        alt="Your alt text"
-        className="background-image"
-        loading="lazy"
-      />
+      <img src={josh3} alt="Your alt text" className="background-image" loading="lazy" />
       <div className="landingpage__container">
         <div className="landingpage__container__top">
           <p className="landingpage__container__top__brand" ref={brandTopRef}>
             ASPHALT
           </p>
           <div className="landingpage__container__top__catch">
-            <span ref={rideRef}>RIDE</span>{" "}
-            <span ref={worldRef}>THE WORLD</span>
+            <span ref={rideRef}>RIDE</span> <span ref={worldRef}>THE WORLD</span>
           </div>
         </div>
         <div className="landingpage__container__bottom">
@@ -71,9 +79,11 @@ const LandingPage = () => {
           <p className="landingpage__container__bottom__time">{time}</p>
         </div>
       </div>
+      <p className="count"> {count}</p> {/* Affichez la valeur de count ici */}
     </div>
   );
 };
+
 const WrappedLanding = transition(LandingPage);
 
 export default WrappedLanding;
