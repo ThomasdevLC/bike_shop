@@ -18,11 +18,11 @@ function App() {
   useEffect(() => {
     const pages = [
       { path: "/LandingPage", duration: 5600 },
-      // { path: "/CycleOne", duration: 2700 },
-      // { path: "/CycleTwo", duration: 2650 },
-      // { path: "/CycleThree", duration: 3400 },
-      // { path: "/CycleFour", duration: 3300 },
-      // { path: "/FinalPage" },
+      { path: "/CycleOne", duration: 2700 },
+      { path: "/CycleTwo", duration: 2650 },
+      { path: "/CycleThree", duration: 3400 },
+      { path: "/CycleFour", duration: 3300 },
+      { path: "/FinalPage" },
     ];
 
     const changePage = () => {
@@ -50,13 +50,12 @@ function App() {
     <div className="appcontainer">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/LandingPage" element={<LandingPage />} />
+          <Route path="/LandingPage" element={<LandingPage currentPageIndex={currentPageIndex} />} />
           <Route path="/CycleOne" element={<CycleOne />} />
           <Route path="/CycleTwo" element={<CycleTwo />} />
           <Route path="/CycleThree" element={<CycleThree />} />
           <Route path="/CycleFour" element={<CycleFour />} />
           <Route path="/FinalPage" element={<FinalPage />} />
-          <Route path="/Shop" element={<Shop />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/ThanksPage" element={<ThanksPage />} />
         </Routes>
