@@ -1,27 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
+import Count from "../components/LandingPage/Count";
 
 const LandingPage = () => {
-  const [count, setCount] = useState(100);
-  const formattedCount = String(count).padStart(3, "0");
   const time = dateTimeUtils.currentTime();
-
   const brandTopRef = useRef(null);
   const brandContRef = useRef(null);
   const cityTimeRef = useRef(null);
   const btnRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (count > 0) {
-        setCount(count - 1);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, [count]);
 
   useEffect(() => {
     const brand = brandTopRef.current;
@@ -36,8 +25,8 @@ const LandingPage = () => {
       },
       {
         y: 0,
-        duration: 1,
-        ease: "cubic-bezier(.075,.82,.165,1)",
+        duration: 1.2,
+        ease: "cubic-bezier(.075,.82,.165,1.5)",
       }
     );
     gsap.fromTo(
@@ -48,8 +37,8 @@ const LandingPage = () => {
       {
         y: 0,
         duration: 0.6,
-        ease: "cubic-bezier(.075,.82,.165,1)",
-        delay: 1.2,
+        ease: "cubic-bezier(.075,.82,.165,1.5)",
+        delay: 0.9,
       }
     );
     gsap.fromTo(
@@ -61,7 +50,7 @@ const LandingPage = () => {
         y: 0,
         duration: 0.5,
         ease: "cubic-bezier(.075,.82,.165,1)",
-        delay: 1.6,
+        delay: 1.2,
       }
     );
   }, []);
@@ -83,7 +72,9 @@ const LandingPage = () => {
           <p className="landingpage__container__bottom__time">{time}</p>
         </div>
       </div>
-      <p className="count"> {formattedCount}</p>
+      <div className="">
+        <Count />
+      </div>
       <button className="button" ref={btnRef}>
         SKIP INTRO
       </button>

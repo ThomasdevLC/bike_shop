@@ -1,7 +1,7 @@
-const useSpanElements = (word) => {
+const useSpanElements = (word, className) => {
   const spanElements = word.split("").map((char, index) => (
-    <span key={index} className="first-level-span">
-      <span className="second-level-span">{char}</span>
+    <span key={index} className={`${className}-first-level-span`}>
+      <span className={`${className}-second-level-span`}>{char}</span>
     </span>
   ));
 
