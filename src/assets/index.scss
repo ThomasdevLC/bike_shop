@@ -1,6 +1,7 @@
 @use "./base";
 @use "./app";
 @use "./pages/LandingPage";
+@use "./components//LandingPage/TagLine";
 
 @use "./pages/CycleOne";
 @use "./components/CycleOne/BannerFive";

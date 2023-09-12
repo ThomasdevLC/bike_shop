@@ -18,11 +18,11 @@ function App() {
   useEffect(() => {
     const pages = [
       { path: "/LandingPage", duration: 5600 },
-      { path: "/CycleOne", duration: 2700 },
-      { path: "/CycleTwo", duration: 2650 },
-      { path: "/CycleThree", duration: 3400 },
-      { path: "/CycleFour", duration: 3300 },
-      { path: "/FinalPage" },
+      // { path: "/CycleOne", duration: 2700 },
+      // { path: "/CycleTwo", duration: 2650 },
+      // { path: "/CycleThree", duration: 3400 },
+      // { path: "/CycleFour", duration: 3300 },
+      // { path: "/FinalPage" },
     ];
 
     const changePage = () => {

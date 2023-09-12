@@ -1,0 +1,37 @@
+.tagline {
+  display: flex;
+  gap: 30px;
+}
+
+.first-level-span {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.second-level-span {
+  overflow: hidden;
+  font-size: 80px;
+  font-weight: 600;
+  display: inline-block;
+  transform: translate3d(-140%, 0, 0);
+  animation: slideInOut 6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInOut {
+  0% {
+    opacity: 1;
+    transform: translate3d(-120%, 0, 0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
