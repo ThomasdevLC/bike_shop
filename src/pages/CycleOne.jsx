@@ -1,6 +1,6 @@
 import BannerFive from "../components/CycleOne/BannerFive";
 import BannerFour from "../components/CycleOne/BannerFour";
-import Bannerthree from "../components/CycleOne/BannerThree";
+import BannerThree from "../components/CycleOne/BannerThree";
 import BannerTwo from "../components/CycleOne/BannerTwo";
 import BannerOne from "../components/CycleOne/BannerOne";
 import BannerSeven from "../components/CycleOne/BannerSeven";
@@ -14,7 +14,7 @@ const CycleOne = () => {
 
       <BannerFive />
       <BannerFour />
-      <Bannerthree />
+      <BannerThree />
       <BannerTwo />
       <BannerOne />
       <BannerSeven />
