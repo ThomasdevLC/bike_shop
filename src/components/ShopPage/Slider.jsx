@@ -21,7 +21,7 @@ const Slider = () => {
       <motion.div className="slider__wrapper" ref={sliderWrapper} whileTap={{ cursor: "grabbing" }}>
         <motion.div className="slider__wrapper__inner" drag="x" dragConstraints={{ right: 0, left: -width }}>
           {sliderData.map((card, index) => (
-            <div className="card" key={index}>
+            <div className={`card ${index === 0 ? "first-card" : ""}`} key={index}>
               <h1 className="card__title">{card.title}</h1>
               <div className="card__img">
                 <img src={card.image} alt="" />
