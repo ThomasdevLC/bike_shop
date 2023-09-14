@@ -24,7 +24,7 @@ const LandingPage = () => {
     gsap.fromTo(
       [brand, brandCont],
       {
-        y: 200,
+        y: 250,
       },
       {
         y: 0,

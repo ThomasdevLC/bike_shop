@@ -57,16 +57,10 @@
   border-radius: 42px;
   border: none;
   display: flex;
-  gap: 10px;
+  gap: 5px;
 
   &__arrow {
-    font-weight: 100;
-    color: white;
-    background-color: black;
-    border-radius: 50%;
-    font-size: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 36px;
+    font-weight: 300;
   }
 }
