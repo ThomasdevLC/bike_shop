@@ -7,6 +7,7 @@ import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
 import Count from "../components/LandingPage/Count";
+import ScrollSection from "./ScrollSection";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -64,29 +65,32 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="landingpage">
-      <img src={josh3} alt="Your alt text" className="background-image" loading="lazy" />
-      <div className="landingpage__container">
-        <div className="landingpage__container__top">
-          <div className="landingpage__container__top__brand" ref={brandContRef}>
-            <p ref={brandTopRef}>ASPHALT</p>
+    <>
+      <div className="landingpage">
+        <img src={josh3} alt="Your alt text" className="background-image" loading="lazy" />
+        <div className="landingpage__container">
+          <div className="landingpage__container__top">
+            <div className="landingpage__container__top__brand" ref={brandContRef}>
+              <p ref={brandTopRef}>ASPHALT</p>
+            </div>
+            <div className="landingpage__container__top__catch">
+              <TagLine />
+            </div>
           </div>
-          <div className="landingpage__container__top__catch">
-            <TagLine />
+          <div className="landingpage__container__bottom" ref={cityTimeRef}>
+            <p className="landingpage__container__bottom__city">PARIS</p>
+            <p className="landingpage__container__bottom__time">{time}</p>
           </div>
         </div>
-        <div className="landingpage__container__bottom" ref={cityTimeRef}>
-          <p className="landingpage__container__bottom__city">PARIS</p>
-          <p className="landingpage__container__bottom__time">{time}</p>
+        <div className="">
+          <Count />
         </div>
+        <button className="button" ref={btnRef} onClick={handleSkipIntro}>
+          SKIP INTRO
+        </button>
       </div>
-      <div className="">
-        <Count />
-      </div>
-      <button className="button" ref={btnRef} onClick={handleSkipIntro}>
-        SKIP INTRO
-      </button>
-    </div>
+      <ScrollSection />
+    </>
   );
 };
 
