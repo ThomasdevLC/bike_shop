@@ -1,5 +1,4 @@
 .finalpage {
-  color: white;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -15,7 +14,7 @@
       transform: rotate(180deg);
       font-size: 56px;
       font-weight: 700;
-      color: #fa481c;
+      color: var(--primary);
       cursor: pointer;
     }
     &__hidden {

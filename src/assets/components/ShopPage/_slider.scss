@@ -1,6 +1,5 @@
 .slider {
   display: flex;
-  background-color: #0d0d0d;
   height: 100%;
   cursor: grab;
   &__wrapper {
@@ -16,15 +15,14 @@
 
 .card {
   width: 762px;
-  background-color: #0d0d0d;
-  border-right: 1px solid white;
+  border-right: 1px solid var(--text-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   &__title {
-    -webkit-text-stroke: 2px #fa481c;
-    color: #0d0d0d;
+    -webkit-text-stroke: 2px var(--primary);
+    color: var(--secondary);
     font-size: 72px;
     font-weight: 700;
     padding: 20px 0 0 40px;
@@ -42,7 +40,7 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--text-color);
     font-size: 26px;
 
     &__price {
@@ -58,7 +56,7 @@
       border: none;
       display: inline-block;
       position: relative;
-      border-left: 1px solid white;
+      border-left: 1px solid var(--text-color);
       cursor: pointer;
       transition: 0.4s ease all;
     }
@@ -90,13 +88,13 @@
       transform: translateY(-200%);
     }
     &__purchase:hover {
-      background-color: #fa481c;
+      background-color: var(--primary);
     }
   }
 }
 
 .first-card {
-  border-left: 1px solid white;
+  border-left: 1px solid var(--text-color);
 }
 
 .card:hover .card__img img {

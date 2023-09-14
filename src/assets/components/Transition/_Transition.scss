@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #0d0d0d;
+  background-color: var(--secondary);
   transform-origin: bottom;
   z-index: 999;
 }
@@ -15,7 +15,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #0d0d0d;
+  background-color: var(--secondary);
   transform-origin: top;
   z-index: 999;
 }

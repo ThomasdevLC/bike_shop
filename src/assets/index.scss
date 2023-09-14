@@ -1,5 +1,6 @@
 @use "./base";
 @use "./app";
+@use "./variables";
 @use "./pages/LandingPage";
 @use "./components//LandingPage/TagLine";
 @use "./components//LandingPage/Count";
