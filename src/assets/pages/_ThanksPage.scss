@@ -4,6 +4,29 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  &__top {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    &__brand {
+      font-size: 56px;
+      font-weight: 600;
+    }
+    &__back {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 20px;
+      cursor: pointer;
+
+      &__arrow {
+        vertical-align: middle;
+        padding-right: 5px;
+      }
+    }
+  }
+
   &__text {
     // font-size: 180px;
     font-size: 140px;
