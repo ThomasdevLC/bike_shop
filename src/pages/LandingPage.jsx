@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
-import arrow from "../assets/images/arrow.png";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
