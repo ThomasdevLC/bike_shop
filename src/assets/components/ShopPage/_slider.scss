@@ -1,7 +1,6 @@
 .slider {
   display: flex;
   background-color: #0d0d0d;
-  color: white;
   height: 100%;
   cursor: grab;
   &__wrapper {
@@ -24,8 +23,10 @@
   justify-content: space-between;
   position: relative;
   &__title {
-    font-size: 62px;
-    font-weight: 400;
+    -webkit-text-stroke: 2px #fa481c;
+    color: #0d0d0d;
+    font-size: 72px;
+    font-weight: 700;
     padding: 20px 0 0 40px;
     line-height: 0px;
   }
