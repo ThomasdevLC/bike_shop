@@ -1,25 +1,19 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import josh3 from "../assets/images/josh3.webp";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
-import Count from "../components/LandingPage/Count";
+// import Count from "../components/LandingPage/Count";
 import ScrollSection from "./ScrollSection";
 
 const LandingPage = () => {
-  const navigate = useNavigate();
   const time = dateTimeUtils.currentTime();
   const brandTopRef = useRef(null);
   const brandContRef = useRef(null);
   const cityTimeRef = useRef(null);
   const btnRef = useRef(null);
-
-  const handleSkipIntro = () => {
-    navigate("/FinalPage");
-  };
 
   useEffect(() => {
     const brand = brandTopRef.current;
@@ -82,11 +76,11 @@ const LandingPage = () => {
             <p className="landingpage__container__bottom__time">{time}</p>
           </div>
         </div>
-        <div className="">
+        {/* <div className="">
           <Count />
-        </div>
-        <button className="button" ref={btnRef} onClick={handleSkipIntro}>
-          SKIP INTRO
+        </div> */}
+        <button className="button" ref={btnRef}>
+          SCROLL DOWN{" "}
         </button>
       </div>
       <ScrollSection />
