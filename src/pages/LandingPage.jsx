@@ -2,10 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
+import arrow from "../assets/images/arrow.png";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
-// import Count from "../components/LandingPage/Count";
 import ScrollSection from "./ScrollSection";
 
 const LandingPage = () => {
@@ -76,11 +76,10 @@ const LandingPage = () => {
             <p className="landingpage__container__bottom__time">{time}</p>
           </div>
         </div>
-        {/* <div className="">
-          <Count />
-        </div> */}
+
         <button className="button" ref={btnRef}>
-          SCROLL DOWN{" "}
+          SCROLL DOWN
+          <span className="button__arrow material-symbols-outlined">expand_more</span>
         </button>
       </div>
       <ScrollSection />
