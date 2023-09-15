@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 
@@ -16,10 +18,9 @@ const BlockType = ({ utc, city, nextCity }) => {
     });
 
     return () => {
-      // Cleanup the SplitType instance when the component is unmounted
       splitBlockCity.revert();
     };
-  }, [city]); // Re-run the effect whenever 'city' changes
+  }, [city]);
 
   return (
     <div className="blocktype">

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 
@@ -22,7 +24,7 @@ const BlockTypeScale = ({ utc, city }) => {
       scaleX: 2,
       scaleY: 2,
       y: "85%",
-      transformOrigin: "0% 50%", // Set the transform origin to keep the left edge fixed
+      transformOrigin: "0% 50%",
       ease: "power3.inOut",
     });
     gsap.from(splitMandarin, {
@@ -32,7 +34,7 @@ const BlockTypeScale = ({ utc, city }) => {
       stagger: 0.3,
       ease: "power3.out",
     });
-  }, [city]); // Run the effect whenever the randomIndex changes
+  }, [city]);
 
   return (
     <div className="blocktypescale">
@@ -44,8 +46,7 @@ const BlockTypeScale = ({ utc, city }) => {
         <p className="blocktypescale__bottom__time">{`UTC ${utc}`}</p>
         <p className="blocktypescale__bottom__cityone">{city}</p>
         <p className="blocktypescale__bottom__citytwo">
-          BEIJING{" "}
-          <span className="blocktypescale__bottom__citythree">北京 </span>
+          BEIJING <span className="blocktypescale__bottom__citythree">北京 </span>
         </p>
       </div>
     </div>
