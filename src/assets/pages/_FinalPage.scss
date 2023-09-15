@@ -1,21 +1,20 @@
 .finalpage {
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 340px;
+    // justify-content: space-around;
+    // gap: 340px;
     &__shop {
-      display: flex;
       writing-mode: vertical-lr;
       transform: rotate(180deg);
       font-size: 56px;
       font-weight: 700;
       color: var(--primary);
       cursor: pointer;
+      flex-grow: 1;
     }
     &__hidden {
       overflow: hidden;
@@ -33,14 +32,4 @@
       font-weight: 500;
     }
   }
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
 }
