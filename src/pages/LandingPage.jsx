@@ -34,7 +34,7 @@ const LandingPage = () => {
     gsap.fromTo(
       cityTime,
       {
-        y: 200,
+        y: 0,
       },
       {
         y: 0,
@@ -75,8 +75,10 @@ const LandingPage = () => {
           </div>
 
           <div className="landingpage__container__bottom" ref={cityTimeRef}>
-            {/* <p className="landingpage__container__bottom__city">PARIS</p>
-            <p className="landingpage__container__bottom__time">{time}</p> */}
+            <div className="landingpage__container__bottom__city">
+              <p>PARIS</p>
+              <p>{time}</p>
+            </div>
           </div>
         </div>
 

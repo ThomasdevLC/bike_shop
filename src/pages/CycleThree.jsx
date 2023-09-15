@@ -14,7 +14,7 @@ const CycleThree = () => {
     const middleBlock = middleRef.current;
     const rightBlock = rightRef.current;
 
-    gsap.fromTo([rightBlock, middleBlock, leftBlock], { x: "-150%" }, { x: 0, stagger: 0.4, duration: 0.8, ease: "sine.inOut" });
+    gsap.fromTo([rightBlock, middleBlock, leftBlock], { x: "-150%" }, { x: 0, stagger: 0.4, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
   }, []);
 
   return (

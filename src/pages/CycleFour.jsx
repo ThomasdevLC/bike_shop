@@ -17,7 +17,7 @@ const CycleFour = () => {
     const BoxThreeX = threeRef.current;
     const BoxFourX = fourRef.current;
 
-    gsap.fromTo([BoxOneX, BoxTwoX, BoxThreeX, BoxFourX], { x: "-120%" }, { x: 0, stagger: 0.3, duration: 0.8, ease: "sine.inOut" });
+    gsap.fromTo([BoxOneX, BoxTwoX, BoxThreeX, BoxFourX], { x: "-120%" }, { x: 0, stagger: 0.3, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
   }, []);
 
   return (
