@@ -12,12 +12,6 @@ const BannerOne = () => {
       duration: 2,
       ease: "power3.out",
     });
-    // .to(cities, {
-    //   x: "-610%",
-    //   y: "220%",
-    //   duration: 0.8,
-    //   ease: "power2.in",
-    // });
 
     return () => {
       timeline.kill();
@@ -43,10 +37,7 @@ const BannerOne = () => {
 
   return (
     <div className="container">
-      <div className="banner__one">
-        {renderCities()}
-        {/* Ajouter les autres div "city" ici */}
-      </div>
+      <div className="banner__one">{renderCities()}</div>
     </div>
   );
 };

@@ -15,12 +15,6 @@ const Bannertwo = () => {
       duration: 2,
       ease: "power3.out",
     });
-    // .to(cities, {
-    //   x: "-610%",
-    //   y: "600%",
-    //   duration: 0.9,
-    //   ease: "power2.in",
-    // });
 
     return () => {
       timeline.kill();

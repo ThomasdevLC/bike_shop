@@ -15,15 +15,8 @@ const BannerFive = () => {
       duration: 2,
       ease: "power3.out",
     });
-    // .to(cities, {
-    //   x: "-610%",
-    //   y: "-190%",
-    //   duration: 0.5,
-    //   ease: "power2.in",
-    // });
 
     return () => {
-      // Arrêter l'animation lorsqu'on démonte le composant
       timeline.kill();
     };
   }, []);

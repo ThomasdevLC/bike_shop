@@ -14,16 +14,6 @@ const BannerEight = () => {
       duration: 2,
       ease: "power3.out",
     });
-    // .to(cities, {
-    //   x: "-610%",
-    //   y: "200%",
-    //   duration: 0.4,
-    //   ease: "power2.in",
-    // });
-
-    // return () => {
-    //   timeline.kill();
-    // };
   }, []);
 
   return (
