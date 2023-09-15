@@ -17,9 +17,33 @@
       }
       &__catch {
         font-size: 90px;
-        line-height: 90px;
+        line-height: 60px;
         display: flex;
         align-items: center;
+
+        &__world {
+          width: 130px;
+          margin-left: 30px;
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+            filter: brightness(3);
+            opacity: 0;
+            animation: slideTop 1s ease forwards;
+            animation-delay: 1s;
+          }
+          @keyframes slideTop {
+            0% {
+              opacity: 1;
+              transform: translate3d(0, 120%, 0);
+            }
+            100% {
+              opacity: 1;
+              transform: translate3d(0%, 0, 0);
+            }
+          }
+        }
       }
     }
     &__bottom {
@@ -29,16 +53,6 @@
         font-size: 50px;
       }
     }
-  }
-}
-
-.world {
-  width: 140px;
-  margin-left: 30px;
-
-  & img {
-    width: 100%;
-    filter: brightness(3);
   }
 }
 

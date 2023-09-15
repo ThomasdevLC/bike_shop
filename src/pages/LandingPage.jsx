@@ -27,8 +27,8 @@ const LandingPage = () => {
       },
       {
         y: 0,
-        duration: 1.2,
-        ease: "cubic-bezier(.075,.82,.165,1.5)",
+        duration: 1,
+        ease: [0.075, 0.82, 0.165, 1.5],
       }
     );
     gsap.fromTo(
@@ -39,8 +39,8 @@ const LandingPage = () => {
       {
         y: 0,
         duration: 0.6,
-        ease: "cubic-bezier(.075,.82,.165,1.5)",
         delay: 0.9,
+        ease: [0.075, 0.82, 0.165, 1.5],
       }
     );
     gsap.fromTo(
@@ -50,9 +50,9 @@ const LandingPage = () => {
       },
       {
         y: 0,
-        duration: 0.5,
-        ease: "cubic-bezier(.075,.82,.165,1)",
+        duration: 0.6,
         delay: 1.2,
+        ease: [0.075, 0.82, 0.165, 1.5],
       }
     );
   }, []);
@@ -68,7 +68,7 @@ const LandingPage = () => {
             </div>
             <div className="landingpage__container__top__catch">
               <TagLine />
-              <div className="world">
+              <div className="landingpage__container__top__catch__world">
                 <img src={world} alt="world GIF" />
               </div>
             </div>
