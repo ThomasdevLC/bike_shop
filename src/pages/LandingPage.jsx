@@ -75,8 +75,8 @@ const LandingPage = () => {
           </div>
 
           <div className="landingpage__container__bottom" ref={cityTimeRef}>
-            <p className="landingpage__container__bottom__city">PARIS</p>
-            <p className="landingpage__container__bottom__time">{time}</p>
+            {/* <p className="landingpage__container__bottom__city">PARIS</p>
+            <p className="landingpage__container__bottom__time">{time}</p> */}
           </div>
         </div>
 
