@@ -34,7 +34,7 @@ const LandingPage = () => {
     gsap.fromTo(
       cityTime,
       {
-        y: 0,
+        y: 120,
       },
       {
         y: 0,
