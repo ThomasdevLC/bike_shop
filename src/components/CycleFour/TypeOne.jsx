@@ -8,7 +8,7 @@ const TypeOne = () => {
     <div className="typeone">
       <div className="typeone__bottom">
         <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
-        {randomIndex.map((index, i) => (
+        {randomIndex.map((index) => (
           <p key={index}>{capitalsUTC[index]?.city}</p>
         ))}
         <div className="typeone__top">

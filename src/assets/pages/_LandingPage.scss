@@ -18,6 +18,8 @@
       &__catch {
         font-size: 90px;
         line-height: 90px;
+        display: flex;
+        align-items: center;
       }
     }
     &__bottom {
@@ -30,6 +32,16 @@
   }
 }
 
+.world {
+  width: 140px;
+  margin-left: 30px;
+
+  & img {
+    width: 100%;
+    filter: brightness(3);
+  }
+}
+
 .background-image {
   position: absolute;
   top: 0;
@@ -38,14 +50,6 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
-
-.count {
-  font-size: 40px;
-  font-weight: 600;
-  position: absolute;
-  top: 40px;
-  right: 50px;
 }
 
 .button {

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
+import world from "../assets/images/world.gif";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
@@ -67,8 +68,12 @@ const LandingPage = () => {
             </div>
             <div className="landingpage__container__top__catch">
               <TagLine />
+              <div className="world">
+                <img src={world} alt="world GIF" />
+              </div>
             </div>
           </div>
+
           <div className="landingpage__container__bottom" ref={cityTimeRef}>
             <p className="landingpage__container__bottom__city">PARIS</p>
             <p className="landingpage__container__bottom__time">{time}</p>
