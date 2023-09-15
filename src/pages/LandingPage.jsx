@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { useEffect, useRef } from "react";
 import josh3 from "../assets/images/josh3.webp";
 import transition from "../components/Transition/transition";
