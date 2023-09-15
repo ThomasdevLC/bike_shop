@@ -1,12 +1,12 @@
 .finalpage {
   height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
   &__container {
     display: flex;
     align-items: center;
-    // justify-content: space-around;
-    // gap: 340px;
+    gap: 180px;
     &__shop {
       writing-mode: vertical-lr;
       transform: rotate(180deg);
@@ -14,7 +14,6 @@
       font-weight: 700;
       color: var(--primary);
       cursor: pointer;
-      flex-grow: 1;
     }
     &__hidden {
       overflow: hidden;
