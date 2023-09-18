@@ -16,7 +16,7 @@ const BottomShape = () => {
       {
         opacity: 1,
         duration: 0.075,
-        delay: 1,
+        delay: 1.5,
         stagger: {
           from: "random",
           each: 0.03,
