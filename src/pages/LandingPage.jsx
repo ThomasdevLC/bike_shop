@@ -6,6 +6,7 @@ import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
 import ScrollSection from "./ScrollSection";
+import BottomShape from "../components/LandingPage/BottomShape";
 
 const LandingPage = () => {
   const time = dateTimeUtils.currentTime();
@@ -74,12 +75,14 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="landingpage__container__bottom" ref={cityTimeRef}>
+          {/* <div className="landingpage__container__bottom" ref={cityTimeRef}>
             <div className="landingpage__container__bottom__city">
               <p>PARIS</p>
               <p>{time}</p>
             </div>
-          </div>
+          </div> */}
+
+          <BottomShape />
         </div>
 
         <button className="button" ref={btnRef}>
