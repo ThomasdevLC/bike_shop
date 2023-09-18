@@ -51,27 +51,11 @@
       font-size: 70px;
       font-weight: 500;
       line-height: 40px;
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -25px;
-      //   left: 0;
-      //   width: 0;
-      //   height: 100%;
-      //   border-top: 1px solid rgba(255, 255, 255, 0.4);
-      //   animation: borderAppear cubic-bezier(0.075, 0.82, 0.165, 1) 1.5s forwards;
-      // }
-
-      // @keyframes borderAppear {
-      //   to {
-      //     width: 100%;
-      //   }
-      // }
 
       &__city {
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
-
         gap: 22px;
       }
     }
