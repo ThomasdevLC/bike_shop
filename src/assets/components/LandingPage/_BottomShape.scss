@@ -1,16 +1,3 @@
-.blocklanding-container {
-  animation: slideFromBottom 1s ease-in-out forwards;
-}
-
-@keyframes slideFromBottom {
-  0% {
-    transform: translateY(300px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .blocklanding {
   width: 400px;
   display: flex;
