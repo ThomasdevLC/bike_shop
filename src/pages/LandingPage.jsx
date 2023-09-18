@@ -12,13 +12,15 @@ const LandingPage = () => {
   const time = dateTimeUtils.currentTime();
   const brandTopRef = useRef(null);
   const brandContRef = useRef(null);
-  const cityTimeRef = useRef(null);
+  const cityRef = useRef(null);
+  const timeRef = useRef(null);
   const btnRef = useRef(null);
 
   useEffect(() => {
     const brand = brandTopRef.current;
     const brandCont = brandContRef.current;
-    const cityTime = cityTimeRef.current;
+    const city = cityRef.current;
+    const time = timeRef.current;
     const btn = btnRef.current;
 
     gsap.fromTo(
@@ -33,7 +35,7 @@ const LandingPage = () => {
       }
     );
     gsap.fromTo(
-      cityTime,
+      [city, time],
       {
         y: 300,
       },
@@ -41,6 +43,7 @@ const LandingPage = () => {
         y: 0,
         duration: 0.6,
         delay: 0.9,
+        stagger: 0.2,
         ease: [0.075, 0.82, 0.165, 1.5],
       }
     );
@@ -52,7 +55,7 @@ const LandingPage = () => {
       {
         y: 0,
         duration: 0.6,
-        delay: 1.2,
+        delay: 1.5,
         ease: [0.075, 0.82, 0.165, 1.5],
       }
     );
@@ -77,9 +80,9 @@ const LandingPage = () => {
 
           <div className="landingpage__container__bottom">
             <BottomShape />
-            <div className="landingpage__container__bottom__city" ref={cityTimeRef}>
-              <p>PARIS</p>
-              <p>{time}</p>
+            <div className="landingpage__container__bottom__city">
+              <p ref={cityRef}>PARIS</p>
+              <p ref={timeRef}>{time}</p>
             </div>
           </div>
         </div>
