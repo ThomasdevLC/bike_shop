@@ -116,4 +116,10 @@
 
 .card:hover:before {
   opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card__title {
+  text-shadow: 0 0 20px rgba(250, 72, 28, 0.22), 0 0 40px rgba(250, 72, 28, 0.22);
+  transition: text-shadow 0.3s ease;
 }

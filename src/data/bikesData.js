@@ -6,24 +6,24 @@ import bike4 from "../assets/images/bike-four.png";
 
 const sliderData = [
   {
-    title: "740 STORMZ",
+    title: "820 STORMZ",
     image: bike1,
     price: "1 299 €",
   },
   {
-    title: "740 STORMZ",
+    title: "740 RIDEZ",
     image: bike2,
-    price: "1 299 €",
+    price: "1 199 €",
   },
   {
-    title: "740 STORMZ",
+    title: "630 EAZY",
     image: bike3,
-    price: "1 299 €",
+    price: "990 €",
   },
   {
-    title: "740 STORMZ",
+    title: "980 HURRICANEZ",
     image: bike4,
-    price: "1 299 €",
+    price: "1 399 €",
   },
 ];
 
