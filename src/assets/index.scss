@@ -1,6 +1,8 @@
 @use "./base";
 @use "./app";
 @use "./variables";
+@use "./debug";
+@use "./mixins";
 @use "./pages/LandingPage";
 @use "./components//LandingPage/TagLine";
 @use "./components//LandingPage/BottomShape";
