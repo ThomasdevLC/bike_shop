@@ -1,3 +1,5 @@
+@use "../mixins" as mixin;
+
 .thankspage {
   height: 100vh;
   display: flex;
@@ -13,6 +15,10 @@
     &__brand {
       font-size: 56px;
       font-weight: 600;
+      @include mixin.xs {
+        font-size: 48px;
+        font-weight: 600;
+      }
     }
     &__back {
       font-size: 28px;
@@ -29,27 +35,41 @@
   }
 
   &__text {
-    // font-size: 180px;
     font-size: 140px;
     position: absolute;
     z-index: 99;
 
+    @include mixin.xs {
+      font-size: 65px;
+    }
+
     &__top {
       overflow: hidden;
       line-height: 150px;
+      @include mixin.xs {
+        line-height: 60px;
+      }
     }
     &__bottom {
       overflow: hidden;
       line-height: 150px;
+      @include mixin.xs {
+        line-height: 60px;
+      }
     }
   }
 
   &__box {
     position: absolute;
     height: 380px;
-    // right: 280px;
     right: 200px;
     overflow: hidden;
+
+    @include mixin.xs {
+      height: 200px;
+      right: 110px;
+      bottom: 50px;
+    }
 
     &__slide {
       background-color: var(--secondary);
@@ -57,6 +77,10 @@
       height: 385px;
       width: 120%;
       z-index: 999;
+
+      @include mixin.xs {
+        height: 202px;
+      }
 
       &__image {
         height: 100%;
