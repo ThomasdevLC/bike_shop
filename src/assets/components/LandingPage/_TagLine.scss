@@ -1,6 +1,11 @@
+@use "../../mixins" as mixin;
 .tagline {
   display: flex;
   gap: 30px;
+
+  @include mixin.xs {
+    gap: 10px;
+  }
 }
 
 .tag-first-level-span {
