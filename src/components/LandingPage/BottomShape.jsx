@@ -3,7 +3,7 @@ import singleSpanChar from "../../utils/singleSpanChar";
 
 const BottomShape = () => {
   const className = "city";
-  const cities = ["MADRID - UTC +1:00", "OSAKA - UTC +7:00", "BERLIN - UTC +01:00", "SYDNEY - UTC+10:00"];
+  const cities = ["MADRID - UTC +01:00", "OSAKA - UTC +07:00", "BERLIN - UTC +01:00", "SYDNEY - UTC+10:00"];
 
   useEffect(() => {
     const citySpans = document.querySelectorAll(".city-span");

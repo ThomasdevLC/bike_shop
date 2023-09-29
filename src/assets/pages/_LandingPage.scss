@@ -1,3 +1,5 @@
+@use "../mixins" as mixin;
+
 .landingpage {
   height: 100vh;
   overflow: hidden;
@@ -16,15 +18,25 @@
         line-height: 200px;
       }
       &__catch {
-        font-size: 90px;
+        font-size: 80px;
+        font-weight: 600;
         line-height: 60px;
         display: flex;
         align-items: center;
+
+        @include mixin.xxl-lt {
+          font-size: 65px;
+          line-height: 45px;
+        }
 
         &__world {
           width: 115px;
           margin-left: 30px;
           overflow: hidden;
+
+          @include mixin.xxl-lt {
+            width: 100px;
+          }
 
           & img {
             width: 100%;
