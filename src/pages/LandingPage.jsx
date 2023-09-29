@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import josh3 from "../assets/images/josh3.webp";
 import world from "../assets/images/world.gif";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
 import ScrollSection from "./ScrollSection";
-import FinalPage from "../pages/FinalPage";
 import BottomShape from "../components/LandingPage/BottomShape";
 
 import widthWatcher from "../utils/widthWatcher";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  const windowWidth = widthWatcher();
   const time = dateTimeUtils.currentTime();
   const brandTopRef = useRef(null);
   const brandContRef = useRef(null);
@@ -19,7 +21,9 @@ const LandingPage = () => {
   const timeRef = useRef(null);
   const btnRef = useRef(null);
 
-  const windowWidth = widthWatcher();
+  const handleShopClick = () => {
+    navigate("/Shop");
+  };
 
   useEffect(() => {
     const brand = brandTopRef.current;
@@ -92,11 +96,15 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {windowWidth > 1460 && (
+        {windowWidth > 1470 ? (
           <button className="button" ref={btnRef}>
             SCROLL DOWN
             <span className="button__arrow material-symbols-outlined">expand_more</span>
           </button>
+        ) : (
+          <p className="landingpage-shoplink" onClick={handleShopClick} ref={btnRef}>
+            Shop
+          </p>
         )}
       </div>
 

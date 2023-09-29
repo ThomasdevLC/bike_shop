@@ -110,3 +110,13 @@
     }
   }
 }
+
+.landingpage-shoplink {
+  position: absolute;
+  bottom: 5px;
+  right: 40px;
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+}
