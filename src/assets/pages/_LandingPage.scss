@@ -16,6 +16,11 @@
         font-size: 190px;
         font-weight: 500;
         line-height: 200px;
+
+        @include mixin.lg {
+          font-size: 180px;
+          line-height: 150px;
+        }
       }
       &__catch {
         font-size: 80px;
@@ -27,6 +32,10 @@
         @include mixin.xxl-lt {
           font-size: 65px;
           line-height: 45px;
+        }
+
+        @include mixin.lg {
+          margin-bottom: 20px;
         }
 
         &__world {
@@ -63,6 +72,10 @@
       font-size: 70px;
       font-weight: 500;
       line-height: 40px;
+
+      @include mixin.lg {
+        font-size: 50px;
+      }
 
       &__city {
         margin-top: 50px;
@@ -119,4 +132,8 @@
   font-weight: 700;
   color: var(--primary);
   cursor: pointer;
+
+  @include mixin.lg {
+    font-size: 50px;
+  }
 }
