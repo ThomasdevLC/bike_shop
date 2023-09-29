@@ -25,6 +25,10 @@
           font-size: 170px;
           line-height: 180px;
         }
+        @include mixin.sm {
+          font-size: 160px;
+          line-height: 150px;
+        }
       }
       &__catch {
         font-size: 80px;
@@ -35,11 +39,15 @@
 
         @include mixin.xxl-lt {
           font-size: 65px;
-          line-height: 45px;
+          line-height: 42px;
         }
 
         @include mixin.lg {
           margin-bottom: 20px;
+        }
+
+        @include mixin.sm {
+          font-size: 50px;
         }
 
         &__world {
