@@ -1,3 +1,5 @@
+@use "../../mixins" as mixin;
+
 .header {
   height: 100%;
   border-bottom: 1px solid var(--text-color);
@@ -10,10 +12,18 @@
     font-size: 56px;
     font-weight: 600;
     cursor: pointer;
+
+    @include mixin.xs {
+      font-size: 32px;
+    }
   }
   &__shop {
     font-size: 54px;
     font-weight: 700;
     color: var(--primary);
+
+    @include mixin.xs {
+      font-size: 32px;
+    }
   }
 }

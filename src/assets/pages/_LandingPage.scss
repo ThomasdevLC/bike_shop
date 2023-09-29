@@ -30,7 +30,7 @@
           line-height: 150px;
         }
         @include mixin.xs {
-          font-size: 70px;
+          font-size: 68px;
           line-height: 75px;
         }
       }
@@ -55,8 +55,8 @@
         }
 
         @include mixin.xs {
-          font-size: 27px;
-          line-height: 22px;
+          font-size: 25px;
+          line-height: 18px;
         }
 
         &__world {
