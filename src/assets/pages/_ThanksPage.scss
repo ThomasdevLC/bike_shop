@@ -39,6 +39,11 @@
     position: absolute;
     z-index: 99;
 
+    @include mixin.md-lt {
+      font-size: 120px;
+      top: 240px;
+    }
+
     @include mixin.xs {
       font-size: 65px;
     }
@@ -46,15 +51,21 @@
     &__top {
       overflow: hidden;
       line-height: 150px;
+      @include mixin.md-lt {
+        line-height: 120px;
+      }
       @include mixin.xs {
-        line-height: 60px;
+        line-height: 70px;
       }
     }
     &__bottom {
       overflow: hidden;
       line-height: 150px;
+      @include mixin.md-lt {
+        line-height: 120px;
+      }
       @include mixin.xs {
-        line-height: 60px;
+        line-height: 70px;
       }
     }
   }
@@ -65,10 +76,14 @@
     right: 200px;
     overflow: hidden;
 
+    @include mixin.md-lt {
+      right: 230px;
+      bottom: 90px;
+    }
     @include mixin.xs {
       height: 200px;
       right: 110px;
-      bottom: 50px;
+      bottom: 60px;
     }
 
     &__slide {
