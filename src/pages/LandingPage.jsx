@@ -6,7 +6,10 @@ import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
 import ScrollSection from "./ScrollSection";
+import FinalPage from "../pages/FinalPage";
 import BottomShape from "../components/LandingPage/BottomShape";
+
+import widthWatcher from "../utils/widthWatcher";
 
 const LandingPage = () => {
   const time = dateTimeUtils.currentTime();
@@ -15,6 +18,8 @@ const LandingPage = () => {
   const cityRef = useRef(null);
   const timeRef = useRef(null);
   const btnRef = useRef(null);
+
+  const windowWidth = widthWatcher();
 
   useEffect(() => {
     const brand = brandTopRef.current;
@@ -87,12 +92,15 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <button className="button" ref={btnRef}>
-          SCROLL DOWN
-          <span className="button__arrow material-symbols-outlined">expand_more</span>
-        </button>
+        {windowWidth > 1460 && (
+          <button className="button" ref={btnRef}>
+            SCROLL DOWN
+            <span className="button__arrow material-symbols-outlined">expand_more</span>
+          </button>
+        )}
       </div>
-      <ScrollSection />
+
+      {windowWidth > 1470 && <ScrollSection />}
     </>
   );
 };
