@@ -8,7 +8,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="appcontainer br">
+    <div className="appcontainer">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<LandingPage />} />

@@ -39,7 +39,7 @@ const BlockTypeScale = ({ utc, city }) => {
   return (
     <div className="blocktypescale">
       <div className="blocktypescale__top">
-        <p className="blocktypescale__top__name">BIKKEY</p>
+        <p className="blocktypescale__top__name">ASPHALT</p>
         <p className="blocktypescale__top__catch">RIDE THE WORLD</p>
       </div>
       <div ref={blockScaleRef} className="blocktype__bottom">

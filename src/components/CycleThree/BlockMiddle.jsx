@@ -25,16 +25,13 @@ const BlockMiddle = () => {
       <p className="blockmiddle__hidden">BIKKEY</p>
 
       <div className="blockmiddle__top">
-        <p className="blockmiddle__top__name">BIKKEY</p>
+        <p className="blockmiddle__top__name">ASPHALT</p>
         <p className="blockmiddle__top__catch">RIDE THE WORLD</p>
       </div>
       <div className="blockmiddle__bottom">
         <p>{`UTC${capitalsUTC[8]?.utc}`} </p> <p>{capitalsUTC[8]?.city}</p>
         {randomIndex.map((index, i) => (
-          <p
-            key={index}
-            ref={i === randomIndex.length - 1 ? lastCityMiddletRef : null}
-          >
+          <p key={index} ref={i === randomIndex.length - 1 ? lastCityMiddletRef : null}>
             {capitalsUTC[index]?.city}
           </p>
         ))}

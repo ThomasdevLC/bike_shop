@@ -25,7 +25,7 @@ const BlockType = ({ utc, city, nextCity }) => {
   return (
     <div className="blocktype">
       <div className="blocktype__top">
-        <p className="blocktype__top__name">BIKKEY</p>
+        <p className="blocktype__top__name">ASPHALT</p>
         <p className="blocktype__top__catch">RIDE THE WORLD</p>
       </div>
       <div className="blocktype__bottom">

@@ -26,15 +26,12 @@ const BlockRight = () => {
       <p className="blockright__hidden">BIKKEY</p>
 
       <div className="blockright__top">
-        <p className="blockright__top__name">BIKKEY</p>
+        <p className="blockright__top__name">ASPHALT</p>
         <p className="blockright__top__catch">RIDE THE WORLD</p>
       </div>
       <div className="blockright__bottom">
         {randomIndex.map((index, i) => (
-          <p
-            key={index}
-            ref={i === randomIndex.length - 1 ? lastCityRightRef : null}
-          >
+          <p key={index} ref={i === randomIndex.length - 1 ? lastCityRightRef : null}>
             {capitalsUTC[index]?.city}
           </p>
         ))}
