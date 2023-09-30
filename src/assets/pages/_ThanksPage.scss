@@ -76,6 +76,10 @@
     right: 200px;
     overflow: hidden;
 
+    @include mixin.xxl-lt {
+      right: 140px;
+    }
+
     @include mixin.md-lt {
       position: static;
       margin: 0 auto;
