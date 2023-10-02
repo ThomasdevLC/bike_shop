@@ -48,6 +48,7 @@
 
         @include mixin.lg {
           margin-bottom: 20px;
+          font-size: 45px;
         }
 
         @include mixin.sm {
@@ -66,6 +67,9 @@
 
           @include mixin.xxl-lt {
             width: 100px;
+          }
+          @include mixin.lg {
+            width: 70px;
           }
 
           @include mixin.xs {
