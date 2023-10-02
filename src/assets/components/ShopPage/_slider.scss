@@ -57,14 +57,26 @@
     &__translate {
       transform: translateY(0);
       display: inline-block;
-      animation: translateAnimation 0.8s ease 2s forwards;
+      animation: translateAnimation 0.6s ease 3s forwards;
+
+      &__arrow {
+        animation: translateHoriz 1s infinite alternate;
+      }
     }
     @keyframes translateAnimation {
       from {
-        transform: translateY(0); /* Position initiale */
+        transform: translateY(0);
       }
       to {
-        transform: translateY(-40px); /* Déplacement de 20 pixels vers le haut */
+        transform: translateY(-40px);
+      }
+    }
+    @keyframes translateHoriz {
+      0% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(2px);
       }
     }
   }

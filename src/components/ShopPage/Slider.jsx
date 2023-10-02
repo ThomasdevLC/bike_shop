@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import sliderData from "../../data/bikesData";
+import DragInfo from "./DragInfo";
 
 const Slider = () => {
   const navigate = useNavigate();
@@ -26,11 +27,8 @@ const Slider = () => {
               <div className="card__img">
                 <img src={card.image} alt="" />
               </div>
-              {index === 0 && (
-                <p className="card__info">
-                  <span className="card__info__translate"> Drag sideways {">"} </span>
-                </p>
-              )}
+
+              <DragInfo index={index} />
 
               <div className="card__bottom">
                 <p className="card__bottom__price">{card.price}</p>
