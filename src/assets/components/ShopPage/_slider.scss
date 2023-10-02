@@ -53,11 +53,20 @@
       bottom: 75px;
       font-size: 22px;
     }
-  }
 
-  &__info span {
-    transform: translateY(-40px); /* Vous pouvez ajuster la valeur (en pixels) selon votre besoin */
-    display: inline-block;
+    &__translate {
+      transform: translateY(0);
+      display: inline-block;
+      animation: translateAnimation 0.8s ease 2s forwards;
+    }
+    @keyframes translateAnimation {
+      from {
+        transform: translateY(0); /* Position initiale */
+      }
+      to {
+        transform: translateY(-40px); /* Déplacement de 20 pixels vers le haut */
+      }
+    }
   }
 
   &__bottom {
