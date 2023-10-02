@@ -26,6 +26,12 @@ const Slider = () => {
               <div className="card__img">
                 <img src={card.image} alt="" />
               </div>
+              {index === 0 && (
+                <p className="card__info">
+                  <span className="card__info__translate"> Drag sideways {">"} </span>
+                </p>
+              )}
+
               <div className="card__bottom">
                 <p className="card__bottom__price">{card.price}</p>
                 <div className="card__bottom__purchase" onClick={handleBuyClick}>

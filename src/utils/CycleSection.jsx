@@ -9,8 +9,8 @@ const CycleSection = ({ sectionRef, cycleComponent }) => {
     const scrollHandler = () => {
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const halfWindowHeight = windowHeight / 1.01;
-      if (rect.top + rect.height / 1.01 >= windowHeight - halfWindowHeight && rect.bottom - rect.height / 1.01 <= halfWindowHeight) {
+      const halfWindowHeight = windowHeight / 1.001;
+      if (rect.top + rect.height / 1.001 >= windowHeight - halfWindowHeight && rect.bottom - rect.height / 1.001 <= halfWindowHeight) {
         setShowCycle(true);
       } else {
         setShowCycle(false);
