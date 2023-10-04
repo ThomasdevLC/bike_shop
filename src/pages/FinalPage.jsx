@@ -18,7 +18,7 @@ const FinalPage = () => {
       const splitBrand = SplitType.create(splitBrandRef.current);
       const sChar = splitBrand.chars[1];
       const pChar = splitBrand.chars[2];
-      gsap.fromTo([sChar, pChar], { y: "30%" }, { y: 0, stagger: 0.2, duration: 1.2, ease: "sine.inOut" });
+      gsap.fromTo([sChar, pChar], { y: "30%" }, { y: 0, stagger: 0.2, delay: 0.4, duration: 1.2, ease: "sine.inOut" });
     }
   }, []);
   return (
