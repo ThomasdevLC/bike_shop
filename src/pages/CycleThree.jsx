@@ -5,6 +5,8 @@ import BlockLeft from "../components/CycleThree/BlockLeft";
 import josh3 from "../assets/images/josh3.webp";
 
 const CycleThree = () => {
+  const { gsap } = window;
+
   const leftRef = useRef(null);
   const middleRef = useRef(null);
   const rightRef = useRef(null);

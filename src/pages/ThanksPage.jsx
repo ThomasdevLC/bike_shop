@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import rider from "../assets/images/rider.jpg";
 const ThanksPage = () => {
   const navigate = useNavigate();
+  const { gsap } = window;
 
   const textTopRef = useRef(null);
   const textBottomRef = useRef(null);

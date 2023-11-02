@@ -5,6 +5,8 @@ import capitalsUTC from "../data/citiesData";
 import josh2 from "../assets/images/josh2.webp";
 
 const CycleTwo = () => {
+  const { gsap } = window;
+
   const topRightRef = useRef(null);
   const bottomRef = useRef(null);
   useEffect(() => {
@@ -23,7 +25,7 @@ const CycleTwo = () => {
       delay: 1.2,
       ease: "Power3.inOut",
     });
-  }, []);
+  });
   return (
     <div className="cycletwo">
       <img src={josh2} alt="Your alt text" className="background-image" loading="lazy" />

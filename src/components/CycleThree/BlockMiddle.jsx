@@ -8,6 +8,8 @@ const BlockMiddle = () => {
   const lastCityMiddletRef = useRef(null);
 
   useEffect(() => {
+    const { gsap } = window;
+
     if (lastCityMiddletRef.current) {
       const city = SplitType.create(lastCityMiddletRef.current);
       const splitCity = city.chars;

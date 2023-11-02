@@ -8,6 +8,8 @@ const BlockLeft = () => {
   const lastCityLeftRef = useRef(null);
 
   useEffect(() => {
+    const { gsap } = window;
+
     if (lastCityLeftRef.current) {
       const city = SplitType.create(lastCityLeftRef.current);
       const splitCity = city.chars;

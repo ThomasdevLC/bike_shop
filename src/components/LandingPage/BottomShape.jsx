@@ -6,6 +6,8 @@ const BottomShape = () => {
   const cities = ["MADRID - UTC +01:00", "OSAKA - UTC +07:00", "BERLIN - UTC +01:00", "SYDNEY - UTC+10:00"];
 
   useEffect(() => {
+    const { gsap } = window;
+
     const citySpans = document.querySelectorAll(".city-span");
 
     gsap.fromTo(

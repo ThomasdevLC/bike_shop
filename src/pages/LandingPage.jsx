@@ -13,8 +13,10 @@ import widthWatcher from "../utils/widthWatcher";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const { gsap } = window;
   const windowWidth = widthWatcher();
   const time = dateTimeUtils.currentTime();
+
   const brandTopRef = useRef(null);
   const brandContRef = useRef(null);
   const cityRef = useRef(null);

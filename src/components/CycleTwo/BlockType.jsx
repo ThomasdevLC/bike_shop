@@ -7,6 +7,8 @@ const BlockType = ({ utc, city, nextCity }) => {
   const splitBlockCityRef = useRef(null);
 
   useEffect(() => {
+    const { gsap } = window;
+
     const splitBlockCity = SplitType.create(splitBlockCityRef.current);
     const chars = splitBlockCity.chars;
 

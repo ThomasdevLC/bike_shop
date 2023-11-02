@@ -4,6 +4,8 @@ import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const TypeFour = () => {
+  const { gsap } = window;
+
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 10);
   const lastCityRef = useRef(null);
 
@@ -19,7 +21,7 @@ const TypeFour = () => {
         ease: "power3.out",
       });
     }
-  }, []);
+  });
   return (
     <div className="typefour">
       <div className="typefour__bottom">

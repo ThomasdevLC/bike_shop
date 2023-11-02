@@ -6,6 +6,8 @@ const BannerEight = () => {
   const cityRefs = useRef([]);
 
   useEffect(() => {
+    const { gsap } = window;
+
     const cities = cityRefs.current;
     const timeline = gsap.timeline();
 

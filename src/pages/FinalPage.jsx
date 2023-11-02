@@ -6,7 +6,9 @@ import josh5 from "../assets/images/josh5.webp";
 
 const FinalPage = () => {
   const navigate = useNavigate();
+  const { gsap } = window;
   const date = dateTimeUtils.currentDay();
+
   const splitBrandRef = useRef(null);
 
   const handleShopClick = () => {

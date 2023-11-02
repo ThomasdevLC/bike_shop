@@ -9,6 +9,8 @@ const TypeThree = () => {
 
   useEffect(() => {
     if (lastCityRef.current) {
+      const { gsap } = window;
+
       const city = SplitType.create(lastCityRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {

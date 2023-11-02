@@ -6,6 +6,8 @@ import BoxFour from "../components/CycleFour/BoxFour";
 import josh4 from "../assets/images/josh4.webp";
 
 const CycleFour = () => {
+  const { gsap } = window;
+
   const oneRef = useRef(null);
   const twoRef = useRef(null);
   const threeRef = useRef(null);
@@ -18,7 +20,7 @@ const CycleFour = () => {
     const BoxFourX = fourRef.current;
 
     gsap.fromTo([BoxOneX, BoxTwoX, BoxThreeX, BoxFourX], { x: "-120%" }, { x: 0, stagger: 0.3, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
-  }, []);
+  });
 
   return (
     <div className="cyclefour">

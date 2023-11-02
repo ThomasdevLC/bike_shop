@@ -4,6 +4,8 @@ import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const BlockRight = () => {
+  const { gsap } = window;
+
   const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 5);
   const lastCityRightRef = useRef(null);
 

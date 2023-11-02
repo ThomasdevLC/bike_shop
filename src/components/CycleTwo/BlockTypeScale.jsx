@@ -7,6 +7,8 @@ const BlockTypeScale = ({ utc, city }) => {
   const blockScaleRef = useRef(null);
 
   useEffect(() => {
+    const { gsap } = window;
+
     const city = SplitType.create(".blocktypescale__bottom__citytwo");
     const splitCity = city.chars;
     const mandarin = SplitType.create(".blocktypescale__bottom__citythree");
