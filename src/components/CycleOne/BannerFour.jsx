@@ -1,27 +1,39 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useMemo } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const BannerFour = () => {
-  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 18);
+  const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
+
+  const randomIndex = useMemo(() => {
+    return uniqueIndex(0, capitalsUTC.length - 1, 18);
+  }, []);
   const cityRefs = useRef([]);
 
   useEffect(() => {
-    const { gsap } = window;
+    if (currentSlideIndex === 1) {
+      const cities = cityRefs.current;
+      const timeline = gsap.timeline();
 
-    const cities = cityRefs.current;
-    const timeline = gsap.timeline();
+      timeline.fromTo(
+        cities,
+        {
+          x: 0,
+        },
+        {
+          x: "-600%",
+          duration: 2,
+          ease: "power3.out",
+        }
+      );
 
-    timeline.to(cities, {
-      x: "-600%",
-      duration: 2,
-      ease: "power3.out",
-    });
-
-    return () => {
-      timeline.kill();
-    };
-  }, []);
+      return () => {
+        timeline.kill();
+      };
+    }
+  }, [gsap, currentSlideIndex]);
 
   return (
     <div className="container">

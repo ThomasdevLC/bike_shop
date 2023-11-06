@@ -1,16 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 import SplitType from "split-type";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const BlockRight = () => {
   const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
 
-  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 5);
+  const randomIndex = useMemo(() => uniqueIndex(0, capitalsUTC.length - 1, 5), []);
+
   const lastCityRightRef = useRef(null);
 
   useEffect(() => {
-    if (lastCityRightRef.current) {
+    if (currentSlideIndex === 3) {
       const city = SplitType.create(lastCityRightRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
@@ -21,7 +24,7 @@ const BlockRight = () => {
         ease: "power3.out",
       });
     }
-  }, []);
+  }, [gsap, currentSlideIndex]);
 
   return (
     <div className="blockright">

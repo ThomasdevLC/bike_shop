@@ -6,7 +6,6 @@ import world from "../assets/images/world.gif";
 import transition from "../components/Transition/transition";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import TagLine from "../components/LandingPage/TagLine";
-import ScrollSection from "./ScrollSection";
 import BottomShape from "../components/LandingPage/BottomShape";
 
 import widthWatcher from "../utils/widthWatcher";
@@ -109,8 +108,6 @@ const LandingPage = () => {
           </p>
         )}
       </div>
-
-      {windowWidth > 1470 && <ScrollSection />}
     </>
   );
 };

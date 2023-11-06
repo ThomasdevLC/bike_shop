@@ -1,24 +1,28 @@
 import { useRef, useEffect } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 
 const BannerOne = () => {
+  const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
+
   const cityRefs = useRef([]);
-
   useEffect(() => {
-    const { gsap } = window;
+    if (currentSlideIndex === 1) {
+      const cities = cityRefs.current;
 
-    const cities = cityRefs.current;
-    const timeline = gsap.timeline();
-
-    timeline.to(cities, {
-      x: "-600%",
-      duration: 2,
-      ease: "power3.out",
-    });
-
-    return () => {
-      timeline.kill();
-    };
-  }, []);
+      gsap.fromTo(
+        cities,
+        {
+          x: 0,
+        },
+        {
+          x: "-600%",
+          duration: 2,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, [gsap, currentSlideIndex]);
 
   const numberOfCities = 10;
 

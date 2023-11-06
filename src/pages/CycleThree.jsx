@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useSlideContext } from "../context/SlideContext";
 import BlockRight from "../components/CycleThree/BlockRight";
 import BlockMiddle from "../components/CycleThree/BlockMiddle";
 import BlockLeft from "../components/CycleThree/BlockLeft";
@@ -6,19 +7,21 @@ import josh3 from "../assets/images/josh3.webp";
 
 const CycleThree = () => {
   const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
 
   const leftRef = useRef(null);
   const middleRef = useRef(null);
   const rightRef = useRef(null);
 
   useEffect(() => {
-    const leftBlock = leftRef.current;
-    const middleBlock = middleRef.current;
-    const rightBlock = rightRef.current;
+    if (currentSlideIndex === 3) {
+      const leftBlock = leftRef.current;
+      const middleBlock = middleRef.current;
+      const rightBlock = rightRef.current;
 
-    gsap.fromTo([rightBlock, middleBlock, leftBlock], { x: "-150%" }, { x: 0, stagger: 0.4, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
-  }, []);
-
+      gsap.fromTo([rightBlock, middleBlock, leftBlock], { x: "-150%" }, { x: 0, stagger: 0.4, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
+    }
+  }, [gsap, currentSlideIndex]);
   return (
     <div className="cyclethree">
       <img src={josh3} alt="Your alt text" className="background-image" loading="lazy" />

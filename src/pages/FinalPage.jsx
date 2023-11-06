@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useSlideContext } from "../context/SlideContext";
 import { useNavigate } from "react-router-dom";
 import dateTimeUtils from "../utils/dateTimeUtils";
 import SplitType from "split-type";
@@ -7,6 +8,7 @@ import josh5 from "../assets/images/josh5.webp";
 const FinalPage = () => {
   const navigate = useNavigate();
   const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
   const date = dateTimeUtils.currentDay();
 
   const splitBrandRef = useRef(null);
@@ -16,13 +18,14 @@ const FinalPage = () => {
   };
 
   useEffect(() => {
-    if (splitBrandRef.current) {
+    if (currentSlideIndex === 5) {
       const splitBrand = SplitType.create(splitBrandRef.current);
       const sChar = splitBrand.chars[1];
       const pChar = splitBrand.chars[2];
-      gsap.fromTo([sChar, pChar], { y: "30%" }, { y: 0, stagger: 0.2, delay: 0.4, duration: 1.2, ease: "sine.inOut" });
+      gsap.fromTo([sChar, pChar], { y: "30%" }, { y: 0, stagger: 0.2, delay: 0.2, duration: 1.2, ease: "sine.inOut" });
     }
-  }, []);
+  }, [gsap, currentSlideIndex]);
+
   return (
     <div className="finalpage">
       <img src={josh5} alt="Your alt text" className="background-image" loading="lazy" />

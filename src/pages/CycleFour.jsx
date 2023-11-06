@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useSlideContext } from "../context/SlideContext";
 import BoxOne from "../components/CycleFour/BoxOne";
 import BoxTwo from "../components/CycleFour/BoxTwo";
 import BoxThree from "../components/CycleFour/BoxThree";
@@ -7,6 +8,7 @@ import josh4 from "../assets/images/josh4.webp";
 
 const CycleFour = () => {
   const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
 
   const oneRef = useRef(null);
   const twoRef = useRef(null);
@@ -14,13 +16,15 @@ const CycleFour = () => {
   const fourRef = useRef(null);
 
   useEffect(() => {
-    const BoxOneX = oneRef.current;
-    const BoxTwoX = twoRef.current;
-    const BoxThreeX = threeRef.current;
-    const BoxFourX = fourRef.current;
+    if (currentSlideIndex === 4) {
+      const BoxOneX = oneRef.current;
+      const BoxTwoX = twoRef.current;
+      const BoxThreeX = threeRef.current;
+      const BoxFourX = fourRef.current;
 
-    gsap.fromTo([BoxOneX, BoxTwoX, BoxThreeX, BoxFourX], { x: "-120%" }, { x: 0, stagger: 0.3, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
-  });
+      gsap.fromTo([BoxOneX, BoxTwoX, BoxThreeX, BoxFourX], { x: "-120%" }, { x: 0, stagger: 0.3, duration: 1, ease: [0.075, 0.82, 0.165, 1] });
+    }
+  }, [gsap, currentSlideIndex]);
 
   return (
     <div className="cyclefour">

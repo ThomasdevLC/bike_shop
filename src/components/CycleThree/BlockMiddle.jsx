@@ -1,16 +1,18 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 import SplitType from "split-type";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const BlockMiddle = () => {
-  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 5);
+  const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
+
+  const randomIndex = useMemo(() => uniqueIndex(0, capitalsUTC.length - 1, 5), []);
   const lastCityMiddletRef = useRef(null);
 
   useEffect(() => {
-    const { gsap } = window;
-
-    if (lastCityMiddletRef.current) {
+    if (currentSlideIndex === 3) {
       const city = SplitType.create(lastCityMiddletRef.current);
       const splitCity = city.chars;
       gsap.from(splitCity, {
@@ -21,7 +23,7 @@ const BlockMiddle = () => {
         ease: "power3.out",
       });
     }
-  }, []);
+  }, [gsap, currentSlideIndex]);
   return (
     <div className="blockmiddle">
       <p className="blockmiddle__hidden">BIKKEY</p>

@@ -1,27 +1,34 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useMemo } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 import capitalsUTC from "../../data/citiesData";
 import uniqueIndex from "../../utils/uniqueIndex";
 
 const Bannerthree = () => {
   const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
 
-  const randomIndex = uniqueIndex(0, capitalsUTC.length - 1, 18);
+  const randomIndex = useMemo(() => {
+    return uniqueIndex(0, capitalsUTC.length - 1, 18);
+  }, []);
   const cityRefs = useRef([]);
 
   useEffect(() => {
-    const cities = cityRefs.current;
-    const timeline = gsap.timeline();
+    if (currentSlideIndex === 1) {
+      const cities = cityRefs.current;
 
-    timeline.to(cities, {
-      x: "-600%",
-      duration: 2,
-      ease: "power3.out",
-    });
-
-    return () => {
-      timeline.kill();
-    };
-  }, []);
+      gsap.fromTo(
+        cities,
+        {
+          x: 0,
+        },
+        {
+          x: "-600%",
+          duration: 2,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, [gsap, currentSlideIndex]);
 
   return (
     <div className="container">

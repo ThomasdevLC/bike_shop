@@ -1,28 +1,32 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect, useRef } from "react";
+import { useSlideContext } from "../../context/SlideContext";
 import SplitType from "split-type";
 
 const BlockType = ({ utc, city, nextCity }) => {
+  const { gsap } = window;
+  const { currentSlideIndex } = useSlideContext();
+
   const splitBlockCityRef = useRef(null);
 
   useEffect(() => {
-    const { gsap } = window;
+    if (currentSlideIndex === 2) {
+      const splitBlockCity = SplitType.create(splitBlockCityRef.current);
+      const chars = splitBlockCity.chars;
 
-    const splitBlockCity = SplitType.create(splitBlockCityRef.current);
-    const chars = splitBlockCity.chars;
+      gsap.from(chars, {
+        opacity: 0,
+        duration: 0.2,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
 
-    gsap.from(chars, {
-      opacity: 0,
-      duration: 0.2,
-      stagger: 0.2,
-      ease: "power3.out",
-    });
-
-    return () => {
-      splitBlockCity.revert();
-    };
-  }, [city]);
+      return () => {
+        splitBlockCity.revert();
+      };
+    }
+  }, [city, currentSlideIndex, gsap]);
 
   return (
     <div className="blocktype">
